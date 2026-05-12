@@ -1,0 +1,3420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0E0E10" />
+<title>TEAM TEAM WORMS — Roller + Ice Hockey • Columbus, OH</title>
+<meta name="description" content="Team Team Worms — championship-winning roller hockey out of Heatwave Arena and ice hockey at The Chiller, Columbus, Ohio. Worms are wiggling." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="TEAM TEAM WORMS — Roller + Ice Hockey · Columbus, OH" />
+<meta property="og:description" content="Six cups and counting. Roller out of Heatwave Arena, ice at The Chiller. Worms are wiggling." />
+<meta property="og:image" content="brand/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="TEAM TEAM WORMS — Roller + Ice Hockey · Columbus, OH" />
+<meta name="twitter:description" content="Six cups and counting. Worms are wiggling." />
+<meta name="twitter:image" content="brand/og-image.jpg" />
+<link rel="icon" type="image/png" href="brand/team-team-logo-clean.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* =======================================================
+   TEAM TEAM WORMS — modern brutalist, mobile-first
+   ======================================================= */
+
+:root{
+  --ink:#0E0E10;
+  --ink-2:#16161A;
+  --paper:#F2EFE6;
+  --paper-2:#E6E2D5;
+  --maroon:#8B1A2B;
+  --maroon-deep:#5C0F1C;
+  --maroon-bright:#A82238;
+  --yellow:#F5C518;        /* primary pop — team gold */
+  --yellow-bright:#FFD23F;
+  --gold:#E8A02A;          /* legacy alias */
+  --blood:#FF3A4C;
+  --green:#22C55E;
+  --line: rgba(14,14,16,.14);
+  --line-light: rgba(242,239,230,.18);
+
+  --r-sm:6px;
+  --r-md:14px;
+  --r-lg:22px;
+
+  --shadow-sm: 0 2px 0 rgba(14,14,16,.18);
+  --shadow-md: 0 8px 24px rgba(14,14,16,.10), 0 2px 0 rgba(14,14,16,.08);
+  --shadow-lg: 0 18px 40px rgba(14,14,16,.18);
+  --shadow-pop: 6px 6px 0 var(--ink);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--paper)}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.5;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* Type helpers */
+.display{font-family:'Archivo Black','Anton',Impact,sans-serif;letter-spacing:-.01em;text-transform:uppercase;line-height:.9}
+.mono{font-family:'JetBrains Mono','Space Mono',monospace}
+.cond{font-family:'Bebas Neue','Anton',sans-serif;letter-spacing:.02em;text-transform:uppercase}
+
+::selection{background:var(--yellow);color:var(--ink)}
+
+/* ===== NAV ===== */
+.nav{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(14,14,16,.92);
+  backdrop-filter:saturate(140%) blur(10px);
+  -webkit-backdrop-filter:saturate(140%) blur(10px);
+  color:var(--paper);
+  border-bottom:1px solid var(--line-light);
+  padding-top:env(safe-area-inset-top, 0);
+}
+.nav-inner{
+  max-width:1280px;margin:0 auto;
+  padding:.7rem 1rem;
+  display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+}
+.nav-brand{
+  display:flex;align-items:center;gap:.55rem;
+  font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.nav-brand .w-mark{
+  display:grid;place-items:center;
+  width:46px;height:46px;
+  background:var(--yellow);
+  border-radius:50%;
+  flex:0 0 auto;
+  box-shadow:0 2px 0 rgba(0,0,0,.35);
+  overflow:hidden;
+  padding:5px;
+}
+.nav-brand .w-mark img{
+  width:100%;height:100%;display:block;
+  object-fit:contain;
+}
+.nav-brand .w-fallback{
+  width:46px;height:46px;background:var(--yellow);color:var(--ink);
+  display:grid;place-items:center;font-family:'Archivo Black',sans-serif;
+  font-size:1.1rem;border-radius:50%;
+}
+@media (max-width:520px){
+  .nav-brand{font-size:1rem;letter-spacing:.06em}
+  .nav-brand .w-mark{width:46px;height:46px}
+  .nav-brand .brand-text{max-width:140px;line-height:1}
+}
+@media (max-width:380px){
+  .nav-brand{font-size:.92rem}
+  .nav-brand .w-mark{width:42px;height:42px}
+}
+/* Desktop links (inline in nav) */
+.nav-links-desktop{display:flex;gap:.25rem;align-items:center}
+.nav-links-desktop a{
+  font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.1em;
+  text-transform:uppercase;padding:.5rem .8rem;border-radius:999px;
+  color:var(--paper);
+  transition:background .15s,color .15s;
+}
+.nav-links-desktop a:hover{background:var(--yellow);color:var(--ink)}
+.nav-links-desktop .cta{background:var(--yellow);color:var(--ink);font-weight:700}
+.nav-links-desktop .cta:hover{background:var(--paper)}
+
+/* Mobile drawer (sibling of nav so backdrop-filter doesn't trap position:fixed) */
+.nav-drawer{
+  display:none;
+}
+@media (max-width:760px){
+  .nav-drawer{
+    display:flex;
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    background:var(--ink);
+    padding:calc(env(safe-area-inset-top, 0px) + 4.8rem) 1.25rem calc(env(safe-area-inset-bottom, 0px) + 1.5rem);
+    flex-direction:column;gap:.35rem;align-items:stretch;
+    overflow-y:auto;
+    transform:translateY(-100%);
+    transition:transform .3s ease-out, visibility 0s linear .3s;
+    z-index:1100;
+    color:var(--paper);
+    visibility:hidden;
+    pointer-events:none;
+  }
+  .nav-drawer.open{
+    transform:translateY(0);
+    visibility:visible;
+    pointer-events:auto;
+    transition:transform .3s ease-out, visibility 0s;
+  }
+}
+.drawer-close{
+  position:absolute;
+  top:calc(env(safe-area-inset-top, 0px) + 1rem);
+  right:1.25rem;
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--yellow);color:var(--ink);
+  padding:.6rem 1rem .6rem .85rem;
+  border-radius:999px;
+  font-family:'Bebas Neue',sans-serif;letter-spacing:.12em;font-size:1rem;
+  text-transform:uppercase;font-weight:700;
+  box-shadow:0 4px 0 rgba(0,0,0,.4);
+  z-index:2;
+  cursor:pointer;
+}
+.drawer-close span:first-child{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--ink);color:var(--yellow);
+  display:grid;place-items:center;font-size:.85rem;line-height:1;
+}
+.nav-drawer a{
+  font-family:'Bebas Neue',sans-serif;letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:1rem 1.25rem;
+  border-radius:12px;
+  font-size:1.4rem;
+  border-bottom:1px solid var(--line-light);
+  text-align:left;
+  color:var(--paper);
+}
+.nav-drawer a:last-child{border-bottom:none}
+.nav-drawer .cta{
+  margin-top:.8rem;
+  border:none;
+  text-align:center;
+  background:var(--yellow);color:var(--ink);
+  font-weight:700;
+  box-shadow:0 4px 0 rgba(0,0,0,.4);
+}
+
+.nav-toggle{
+  display:none;
+  width:44px;height:44px;border-radius:10px;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--line-light);
+  color:var(--paper);
+  font-size:1.4rem;line-height:1;
+  transition:background .15s, color .15s;
+  z-index:1101;
+  position:relative;
+}
+.nav-toggle:hover{background:rgba(255,255,255,.14)}
+.nav-toggle.is-open{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+
+@media (max-width:760px){
+  .nav-toggle{display:grid;place-items:center}
+  .nav-links-desktop{display:none}
+  .nav-drawer{display:flex}
+  body.menu-open{overflow:hidden}
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:'Bebas Neue',sans-serif;text-transform:uppercase;
+  font-size:1.05rem;letter-spacing:.12em;font-weight:400;
+  padding:.95rem 1.4rem;
+  background:var(--yellow);color:var(--ink);
+  border-radius:999px;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s;
+  box-shadow:0 4px 0 rgba(14,14,16,.25);
+  min-height:48px;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 rgba(14,14,16,.25)}
+.btn:active{transform:translateY(1px);box-shadow:0 2px 0 rgba(14,14,16,.25)}
+.btn.ghost{background:transparent;color:var(--paper);border:1.5px solid var(--paper)}
+.btn.ghost:hover{background:var(--paper);color:var(--ink)}
+.btn.ink{background:var(--ink);color:var(--paper)}
+.btn.ink:hover{background:var(--maroon)}
+.btn.maroon{background:var(--maroon);color:var(--paper)}
+.btn.lg{font-size:1.2rem;padding:1.1rem 1.7rem;min-height:54px}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  background:radial-gradient(1100px 700px at 75% -10%, rgba(168,34,56,.55), transparent 60%),
+             radial-gradient(900px 600px at 10% 110%, rgba(245,197,24,.18), transparent 60%),
+             linear-gradient(180deg, var(--ink) 0%, #1d0a0f 100%);
+  color:var(--paper);
+  padding:2.4rem 1rem 3rem;
+  overflow:hidden;
+  isolation:isolate;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size:48px 48px;
+  pointer-events:none;
+  mask-image:radial-gradient(ellipse at center, #000 60%, transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse at center, #000 60%, transparent 100%);
+}
+.hero-inner{
+  max-width:1280px;margin:0 auto;
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;
+  gap:1rem;
+}
+
+.hero-mascot{
+  position:absolute;
+  z-index:1;
+  pointer-events:none;
+  width:min(82%, 480px);
+  right:-12%;top:4%;
+  opacity:.2;
+  filter:drop-shadow(0 14px 36px rgba(0,0,0,.55));
+  transform:rotate(-3deg);
+}
+@media (min-width:760px){
+  .hero-mascot{
+    width:min(46%, 600px);
+    right:-3%;top:50%;
+    opacity:.95;
+    transform:translateY(-50%) rotate(-3deg);
+  }
+}
+@media (min-width:1100px){
+  .hero-mascot{
+    width:660px;
+    right:0%;
+    opacity:1;
+  }
+}
+@media (min-width:1400px){
+  .hero-mascot{
+    width:720px;
+  }
+}
+
+.kicker-pill{
+  align-self:flex-start;
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.4rem .8rem;border-radius:999px;
+  background:rgba(245,197,24,.12);
+  border:1px solid rgba(245,197,24,.4);
+  color:var(--yellow);
+  font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.2em;
+  text-transform:uppercase;
+  max-width:100%;
+  flex-wrap:wrap;
+  line-height:1.4;
+}
+@media (max-width:520px){
+  .kicker-pill{font-size:.6rem;letter-spacing:.16em;padding:.4rem .7rem}
+}
+.kicker-pill::before{
+  content:"";width:6px;height:6px;border-radius:50%;background:var(--yellow);
+  box-shadow:0 0 10px var(--yellow);
+  animation:pulse 1.6s infinite;
+}
+@keyframes pulse{50%{opacity:.4}}
+
+.wordmark{
+  font-family:'Archivo Black','Anton',sans-serif;
+  font-size:clamp(2.8rem,11vw,8rem);
+  line-height:.86;
+  letter-spacing:-.04em;
+  margin:0;
+  color:var(--paper);
+  max-width:58%;
+}
+@media (max-width:760px){
+  .wordmark{max-width:none;font-size:clamp(2.8rem,14vw,5rem)}
+}
+@media (min-width:1400px){
+  .wordmark{max-width:55%;font-size:clamp(2.8rem,10vw,8.5rem)}
+}
+.wordmark .stack{display:block}
+.wordmark .accent{color:var(--yellow)}
+.wordmark .outline{
+  -webkit-text-stroke:2px var(--paper);
+  color:transparent;
+}
+
+.tag{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(1.1rem,3vw,1.6rem);
+  letter-spacing:.18em;
+  color:var(--yellow);
+  margin:.4rem 0 0;
+}
+.venues{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.75rem;letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--paper);opacity:.6;
+  margin:.4rem 0 0;
+}
+@media (max-width:520px){
+  .venues{font-size:.6rem;letter-spacing:.16em}
+}
+.meta{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.78rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--paper);opacity:.7;
+  display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;
+  line-height:1.4;
+}
+@media (max-width:520px){
+  .meta{font-size:.62rem;letter-spacing:.16em;gap:.35rem .7rem}
+}
+.meta .dot{width:4px;height:4px;background:var(--yellow);border-radius:50%}
+
+.stats-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:.4rem;
+  margin-top:1.4rem;
+}
+.stat{
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--line-light);
+  border-radius:var(--r-md);
+  padding:.85rem .6rem;
+  backdrop-filter:blur(6px);
+  min-width:0;
+}
+.stat .num{
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(1.8rem,7vw,3.4rem);
+  line-height:1;color:var(--yellow);
+  letter-spacing:-.02em;
+}
+.stat .lbl{
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:.16em;
+  font-size:.6rem;margin-top:.4rem;
+  text-transform:uppercase;color:var(--paper);opacity:.7;
+}
+@media (min-width:520px){
+  .stat .lbl{font-size:.65rem;letter-spacing:.18em}
+}
+
+.cta-row{
+  display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.6rem;
+}
+.cta-row .btn{flex:1 1 auto;justify-content:center}
+@media (max-width:520px){
+  .cta-row .btn.lg{font-size:1rem;padding:.95rem 1rem;min-height:50px}
+}
+
+@media (min-width:760px){
+  .hero{padding:4rem 2rem 5rem}
+  .hero-inner{gap:1.2rem}
+  .stats-row{grid-template-columns:repeat(3,minmax(0,200px));gap:1rem;margin-top:2rem}
+  .cta-row{margin-top:2rem}
+  .cta-row .btn{flex:0 0 auto}
+}
+
+/* Floating worms — subtle on dark */
+.worm-bg{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;opacity:.55}
+.worm-bg span{
+  position:absolute;bottom:-3rem;font-size:1.5rem;
+  animation:rise 16s linear infinite;
+  filter:saturate(.7);
+}
+@keyframes rise{
+  0%{transform:translateY(0) rotate(0)}
+  100%{transform:translateY(-110vh) rotate(720deg)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .worm-bg span{animation:none;display:none}
+  .kicker-pill::before{animation:none}
+}
+
+/* ===== SECTION SHELL ===== */
+.section{padding:3rem 1rem;position:relative}
+@media (min-width:760px){.section{padding:5rem 2rem}}
+.section-inner{max-width:1280px;margin:0 auto}
+
+.sec-head{
+  display:flex;flex-direction:column;gap:.4rem;
+  margin-bottom:1.6rem;
+}
+.section-kicker{
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:var(--maroon);
+  font-size:.7rem;
+  display:inline-flex;align-items:center;gap:.5rem;
+}
+.section-kicker::before{content:"";width:18px;height:1.5px;background:var(--maroon);display:block}
+.section-title{
+  font-family:'Archivo Black','Anton',sans-serif;text-transform:uppercase;
+  font-size:clamp(2rem,8vw,4.4rem);
+  letter-spacing:-.02em;line-height:.92;
+  color:var(--ink);
+  margin:0;
+}
+.section-title .accent{color:var(--maroon)}
+.section-title .yellow{color:var(--ink);background:var(--yellow);padding:0 .15em;display:inline-block}
+
+/* ===== WORM DECO ===== */
+.worm-deco{
+  display:inline-block;
+  font-size:.7em;
+  vertical-align:middle;
+  margin-left:.15em;
+  transform-origin:center;
+  animation:worm-wiggle 2.8s ease-in-out infinite;
+}
+@keyframes worm-wiggle{
+  0%,100%{transform:rotate(-8deg) translateY(0)}
+  25%   {transform:rotate(10deg) translateY(-2px)}
+  50%   {transform:rotate(-4deg) translateY(0)}
+  75%   {transform:rotate(8deg) translateY(-1px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .worm-deco{animation:none}
+}
+
+/* ===== CHAMP SPORT TAG ===== */
+.champ-card .sport-tag{
+  position:absolute;top:1rem;right:1rem;z-index:2;
+  font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.18em;
+  text-transform:uppercase;font-weight:700;
+  padding:.3rem .55rem;border-radius:6px;
+  background:var(--paper);color:var(--ink);
+  box-shadow:0 2px 6px rgba(0,0,0,.3);
+}
+.champ-card .sport-tag.ice{background:#dceaf7;color:#0a2645}
+
+/* ===== CHAMPIONSHIPS ===== */
+.champ-grid{
+  display:grid;grid-template-columns:1fr;gap:1rem;
+}
+@media (min-width:640px){.champ-grid{grid-template-columns:repeat(2,1fr);gap:1.4rem}}
+@media (min-width:980px){.champ-grid{grid-template-columns:repeat(3,1fr)}}
+.champ-card{
+  background:var(--ink);color:var(--paper);
+  border-radius:var(--r-lg);
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  transition:transform .25s ease, box-shadow .25s ease;
+  box-shadow:var(--shadow-md);
+  display:flex;flex-direction:column;
+}
+.champ-card::before{
+  content:"";position:absolute;inset:auto -20% -40% auto;
+  width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle, var(--maroon) 0%, transparent 70%);
+  z-index:0;pointer-events:none;
+}
+.champ-card:nth-child(2)::before{background:radial-gradient(circle, var(--yellow) 0%, transparent 70%);opacity:.35}
+.champ-card:nth-child(3)::before{background:radial-gradient(circle, var(--gold) 0%, transparent 70%);opacity:.5}
+.champ-card:nth-child(4)::before{background:radial-gradient(circle, var(--maroon-bright) 0%, transparent 70%);opacity:.55}
+.champ-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.champ-card .img-slot{
+  position:relative;
+  width:100%;aspect-ratio:4/3;
+  background:#1a1a1f;
+  overflow:hidden;
+}
+.champ-card .img-slot img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .35s ease;
+}
+.champ-card:hover .img-slot img{transform:scale(1.04)}
+.champ-card .img-slot::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, transparent 55%, rgba(14,14,16,.6) 100%);
+  pointer-events:none;
+}
+.champ-card .body{
+  padding:1.3rem 1.4rem 1.4rem;
+  position:relative;z-index:1;
+}
+.champ-card .trophy{
+  display:inline-grid;place-items:center;
+  width:42px;height:42px;border-radius:12px;
+  background:var(--yellow);color:var(--ink);
+  font-size:1.25rem;
+  position:absolute;top:1rem;left:1rem;
+  z-index:2;
+  box-shadow:0 4px 14px rgba(0,0,0,.35);
+}
+.champ-card .yr{
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(2.2rem,7vw,3rem);
+  color:var(--paper);line-height:.9;letter-spacing:-.03em;
+  padding:1.3rem 1.4rem 0;position:relative;z-index:1;
+}
+.champ-card h3{
+  font-family:'Bebas Neue',sans-serif;text-transform:uppercase;
+  font-size:1.25rem;letter-spacing:.05em;margin:.4rem 0 .35rem;
+  color:var(--paper);line-height:1.1;
+  padding:0 1.4rem;position:relative;z-index:1;
+}
+.champ-card .place{
+  font-family:'JetBrains Mono',monospace;font-size:.7rem;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--yellow);
+  padding:0 1.4rem;position:relative;z-index:1;
+}
+.champ-card .date{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;
+  color:var(--paper);opacity:.6;margin-top:.3rem;letter-spacing:.05em;
+  padding:0 1.4rem 1.4rem;position:relative;z-index:1;
+}
+
+/* ===== ROSTER ===== */
+.roster-section{background:var(--paper-2)}
+.roster-sports{
+  display:flex;flex-direction:column;gap:2.8rem;
+  max-width:1320px;margin:0 auto;
+}
+.roster-sport{display:flex;flex-direction:column;gap:1.2rem}
+.roster-sport-head{
+  display:flex;align-items:center;gap:.6rem;
+  padding-bottom:.5rem;
+  border-bottom:2px solid var(--ink);
+  margin:0;
+}
+.roster-sport-head .ico{font-size:1.4rem;line-height:1}
+.roster-sport-head h3{
+  font-family:'Archivo Black','Anton',sans-serif;
+  text-transform:uppercase;
+  font-size:1.5rem;letter-spacing:-.01em;line-height:1;
+  margin:0;color:var(--ink);
+}
+.roster-sport-head .count{
+  margin-left:auto;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;letter-spacing:.16em;
+  color:var(--ink);opacity:.55;text-transform:uppercase;
+}
+.roster-group{display:flex;flex-direction:column;gap:.5rem}
+.roster-group-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.66rem;letter-spacing:.22em;
+  color:var(--maroon);
+  text-transform:uppercase;
+  margin:.2rem 0 .15rem;
+  display:flex;align-items:center;gap:.5rem;
+}
+.roster-group-label::before{content:"";width:14px;height:1.5px;background:var(--maroon);display:block}
+.roster-list{
+  list-style:none;padding:0;margin:0;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:.4rem;
+}
+@media (min-width:640px){.roster-list{grid-template-columns:repeat(3,1fr);gap:.5rem}}
+@media (min-width:980px){.roster-list{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:1280px){.roster-list{grid-template-columns:repeat(5,1fr);gap:.6rem}}
+.roster-row{
+  display:flex;align-items:center;gap:.85rem;
+  padding:.7rem .9rem;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--r-md);
+  transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.roster-row:hover{
+  transform:translateX(2px);
+  border-color:var(--ink);
+  box-shadow:var(--shadow-sm);
+}
+.roster-row .num{
+  display:inline-grid;place-items:center;
+  min-width:46px;height:46px;
+  padding:0 .35rem;
+  background:linear-gradient(140deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+  color:var(--yellow);
+  font-family:'Archivo Black',sans-serif;
+  font-size:1.1rem;letter-spacing:-.02em;
+  border-radius:10px;
+  flex:0 0 auto;
+}
+.roster-row .num.is-q{font-size:1.5rem}
+.roster-row .name{
+  font-family:'Bebas Neue',sans-serif;text-transform:uppercase;
+  font-size:1.05rem;letter-spacing:.03em;line-height:1.05;
+  color:var(--ink);
+  flex:1;min-width:0;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+}
+.roster-row .name .first,
+.roster-row .name .last{
+  display:block;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.roster-row .name .last{font-weight:700}
+.roster-row .pos{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.65rem;letter-spacing:.18em;
+  color:var(--ink);opacity:.55;
+  text-transform:uppercase;
+  flex:0 0 auto;
+}
+.roster-row .pos.g{background:var(--ink);color:var(--yellow);opacity:1;padding:.18rem .45rem;border-radius:4px}
+
+/* ===== SCHEDULE ===== */
+.sched{
+  display:grid;grid-template-columns:1fr;gap:2rem;
+}
+@media (min-width:780px){.sched{grid-template-columns:1fr 1fr}}
+.sched.sched-single{grid-template-columns:1fr;max-width:760px;margin:0 auto}
+@media (min-width:780px){.sched.sched-single{grid-template-columns:1fr}}
+.sched.sched-split{grid-template-columns:1fr;gap:2.4rem}
+@media (min-width:780px){.sched.sched-split{grid-template-columns:1fr 1fr;gap:2rem}}
+.sched-col h3 .ico{margin-right:.3rem;font-size:1.1em}
+.sched-col-head{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:.75rem;flex-wrap:wrap;
+  margin:0 0 1rem;
+}
+.sched-col-head h3{margin:0}
+.btn.btn-sm{
+  font-size:.78rem;letter-spacing:.1em;
+  padding:.5rem .85rem;
+  min-height:34px;
+  box-shadow:0 2px 0 rgba(14,14,16,.2);
+}
+.section-wide{max-width:1440px}
+.sched-col h3{
+  font-family:'Bebas Neue',sans-serif;text-transform:uppercase;
+  font-size:1.4rem;letter-spacing:.08em;
+  color:var(--ink);margin:0 0 1rem;
+  display:flex;align-items:center;gap:.6rem;
+}
+.sched-col h3::before{
+  content:"";width:8px;height:8px;background:var(--yellow);border-radius:2px;
+}
+.sched-col.upcoming h3::before{background:var(--maroon)}
+
+.game{
+  display:flex;align-items:center;gap:.8rem;
+  padding:.85rem 1rem;background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--r-md);
+  margin-bottom:.55rem;
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s;
+}
+.game:hover{transform:translateX(4px);border-color:var(--ink);box-shadow:var(--shadow-sm)}
+.game .d{
+  font-family:'JetBrains Mono',monospace;font-weight:700;
+  font-size:.78rem;color:var(--ink);min-width:54px;letter-spacing:.05em;
+}
+.game .opp{flex:1;font-family:'Bebas Neue',sans-serif;text-transform:uppercase;font-size:1.05rem;letter-spacing:.04em;line-height:1.1}
+.game .meta-line{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--ink);opacity:.55;letter-spacing:.05em;display:block;margin-top:.2rem;text-transform:none}
+.pill{
+  font-family:'JetBrains Mono',monospace;font-weight:700;
+  padding:.3rem .55rem;font-size:.68rem;
+  border-radius:999px;
+  white-space:nowrap;letter-spacing:.05em;
+}
+.pill.w{background:var(--yellow);color:var(--ink)}
+.pill.l{background:var(--blood);color:var(--paper)}
+.pill.ot{background:var(--gold);color:var(--ink)}
+.pill.up{background:var(--ink);color:var(--paper)}
+
+/* ===== GALLERY ===== */
+.gallery-section{background:var(--paper-2)}
+.gallery-head{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
+  gap:1rem;margin-bottom:1.6rem;
+}
+.ig-btn{font-size:.95rem;padding:.7rem 1.1rem;min-height:44px}
+@media (max-width:520px){
+  .gallery-head{align-items:flex-start}
+  .ig-btn{width:100%;justify-content:center}
+}
+.gallery-note{
+  background:var(--ink);color:var(--paper);
+  padding:.85rem 1.1rem;
+  border-radius:var(--r-md);
+  font-family:'JetBrains Mono',monospace;font-size:.75rem;
+  margin-bottom:1.4rem;
+  display:flex;align-items:center;gap:.7rem;line-height:1.4;
+}
+.gallery-note::before{
+  content:"📷";font-size:1.1rem;
+}
+.gallery-note code{background:rgba(255,255,255,.08);padding:.15rem .35rem;border-radius:6px;color:var(--yellow)}
+
+.masonry{
+  column-count:2;column-gap:1rem;
+}
+@media (min-width:640px){.masonry{column-count:2;column-gap:1.2rem}}
+@media (min-width:900px){.masonry{column-count:3;column-gap:1.4rem}}
+
+.gcard{
+  background:var(--paper);
+  border-radius:var(--r-md);
+  overflow:hidden;
+  margin:0 0 1rem;
+  break-inside:avoid;
+  position:relative;
+  cursor:pointer;
+  transition:transform .25s ease, box-shadow .25s ease;
+  box-shadow:var(--shadow-md);
+}
+.gcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.gcard .img{
+  width:100%;aspect-ratio:1/1;
+  background:linear-gradient(135deg, var(--maroon) 0%, var(--ink) 100%);
+  display:grid;place-items:center;
+  color:var(--paper);font-family:'JetBrains Mono',monospace;
+  letter-spacing:.18em;font-size:.7rem;text-align:center;padding:.5rem;
+  background-size:cover;background-position:center;
+  text-transform:uppercase;
+}
+.gcard .cap{
+  font-family:'Bebas Neue',sans-serif;
+  color:var(--ink);font-size:1rem;line-height:1.15;letter-spacing:.04em;
+  text-transform:uppercase;
+  padding:.7rem .9rem .85rem;
+  border-top:1px solid var(--line);
+  display:flex;align-items:center;gap:.5rem;
+}
+.gcard .cap::before{
+  content:"";width:6px;height:6px;background:var(--yellow);border-radius:2px;flex:0 0 auto;
+}
+
+/* lightbox */
+.lightbox{
+  position:fixed;inset:0;
+  background:rgba(14,14,16,.96);
+  display:none;place-items:center;z-index:1500;
+  padding:2rem 1rem;
+  touch-action:pan-y;
+}
+.lightbox.open{display:grid}
+.lightbox-inner{max-width:1000px;width:100%;text-align:center;position:relative}
+.lightbox img{
+  width:100%;max-height:75vh;object-fit:contain;
+  border-radius:var(--r-md);background:var(--ink-2);
+  user-select:none;-webkit-user-drag:none;
+  transition:opacity .15s ease;
+}
+.lightbox.swiping img{opacity:.5}
+.lightbox .cap{color:var(--paper);font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.06em;text-transform:uppercase;margin-top:1rem;min-height:1.3rem}
+.lightbox .count{
+  font-family:'JetBrains Mono',monospace;
+  color:var(--paper);opacity:.55;
+  font-size:.75rem;letter-spacing:.18em;
+  margin-top:.5rem;text-transform:uppercase;
+}
+.lightbox .x,
+.lightbox .nav{
+  position:absolute;
+  background:var(--yellow);color:var(--ink);
+  width:48px;height:48px;border-radius:999px;
+  display:grid;place-items:center;line-height:1;
+  font-weight:700;font-size:1.4rem;
+  box-shadow:0 4px 14px rgba(0,0,0,.4);
+  transition:transform .15s ease, background .15s ease;
+}
+.lightbox .x:hover,
+.lightbox .nav:hover{transform:scale(1.08);background:var(--yellow-bright)}
+.lightbox .x{top:1rem;right:1rem}
+.lightbox .nav{top:50%;transform:translateY(-50%)}
+.lightbox .nav.prev{left:.5rem}
+.lightbox .nav.next{right:.5rem}
+.lightbox .nav:hover{transform:translateY(-50%) scale(1.08)}
+@media (max-width:640px){
+  .lightbox .nav{width:42px;height:42px;font-size:1.2rem}
+  .lightbox .nav.prev{left:.25rem}
+  .lightbox .nav.next{right:.25rem}
+}
+
+/* ===== GAME MODE TOGGLE ===== */
+.game-mode-toggle{
+  position:relative;z-index:2;
+  display:flex;align-items:center;gap:0;
+  width:fit-content;max-width:100%;
+  flex-wrap:wrap;justify-content:center;
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--line-light);
+  border-radius:999px;
+  padding:4px;
+  margin:0 auto 1.4rem;
+}
+.game-mode-toggle button{
+  font-family:'Bebas Neue',sans-serif;text-transform:uppercase;
+  font-size:.95rem;letter-spacing:.1em;
+  padding:.55rem 1rem;
+  border-radius:999px;
+  color:var(--paper);
+  transition:background .15s, color .15s;
+  min-height:36px;
+  display:inline-flex;align-items:center;gap:.4rem;
+}
+.game-mode-toggle button.active{
+  background:var(--yellow);color:var(--ink);
+  box-shadow:0 2px 0 rgba(0,0,0,.35);
+}
+.game-panel[hidden]{display:none}
+.game-lede{
+  text-align:center;font-family:'Bebas Neue',sans-serif;
+  font-size:1.2rem;letter-spacing:.1em;
+  color:var(--paper);opacity:.75;
+  margin:0 0 1.2rem;
+  position:relative;z-index:2;
+}
+
+/* ===== RINK RUSH ===== */
+.rr-wrap{
+  position:relative;z-index:2;
+  max-width:540px;margin:0 auto;
+  display:flex;flex-direction:column;gap:.8rem;
+}
+.rr-hud{
+  display:flex;align-items:center;gap:.6rem;
+  background:var(--ink-2);
+  border:1px solid var(--line-light);
+  border-radius:14px;
+  padding:.7rem .85rem;
+  font-family:'JetBrains Mono',monospace;
+}
+.rr-hud-cell{
+  flex:1;display:flex;flex-direction:column;
+  align-items:flex-start;line-height:1;
+}
+.rr-hud-cell .lbl{
+  font-size:.55rem;letter-spacing:.22em;
+  opacity:.55;text-transform:uppercase;margin-bottom:.25rem;
+}
+.rr-hud-cell .v{
+  font-family:'Archivo Black',sans-serif;
+  font-size:1.4rem;color:var(--yellow);letter-spacing:-.02em;
+}
+.rr-sound{margin-left:auto}
+.rr-canvas-wrap{
+  position:relative;
+  width:100%;
+  aspect-ratio:540/900;
+  background:#0a0a0c;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--line-light);
+  box-shadow:0 8px 32px rgba(0,0,0,.4);
+  touch-action:none;
+  -webkit-user-select:none;user-select:none;
+}
+.rr-canvas{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  display:block;
+}
+.rr-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(14,14,16,.55) 0%, rgba(14,14,16,.85) 100%);
+  display:flex;align-items:center;justify-content:center;
+  z-index:5;
+  padding:1.5rem;
+  transition:opacity .25s;
+}
+.rr-overlay.hidden{opacity:0;pointer-events:none}
+.rr-overlay-inner{
+  text-align:center;color:var(--paper);
+  display:flex;flex-direction:column;align-items:center;gap:.9rem;
+  max-width:380px;
+}
+.rr-overlay-title{
+  font-family:'Archivo Black','Anton',sans-serif;
+  text-transform:uppercase;
+  font-size:clamp(2.2rem,8vw,3.4rem);
+  letter-spacing:-.02em;line-height:.95;
+  color:var(--yellow);
+}
+.rr-overlay-sub{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.1rem;letter-spacing:.12em;
+  opacity:.85;text-transform:uppercase;
+}
+.rr-overlay-hint{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.6rem;letter-spacing:.12em;line-height:1.5;
+  opacity:.55;text-transform:uppercase;margin-top:.5rem;
+}
+/* Floating power banner */
+.rr-power-banner{
+  position:absolute;top:.8rem;left:50%;transform:translateX(-50%);
+  z-index:4;pointer-events:none;
+  font-family:'Archivo Black',sans-serif;
+  text-transform:uppercase;
+  font-size:.9rem;letter-spacing:.06em;
+  padding:.4rem .85rem;
+  background:var(--yellow);color:var(--ink);
+  border-radius:999px;
+  box-shadow:0 4px 10px rgba(0,0,0,.4);
+  opacity:0;
+  transition:opacity .15s;
+}
+.rr-power-banner.show{opacity:1}
+/* Touch controls (mobile only) */
+.rr-touch-controls{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:0 1rem 1rem;
+  display:flex;align-items:flex-end;justify-content:space-between;
+  z-index:3;pointer-events:none;
+}
+.rr-touch-controls > *{pointer-events:auto}
+.rr-joy{
+  width:108px;height:108px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  position:relative;
+  touch-action:none;
+}
+.rr-joy-nub{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:44px;height:44px;border-radius:50%;
+  background:var(--yellow);
+  box-shadow:0 4px 14px rgba(0,0,0,.35);
+  pointer-events:none;
+  transition:transform .05s linear;
+}
+.rr-action{
+  width:108px;height:108px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, rgba(245,197,24,.9), rgba(245,197,24,.5));
+  border:2px solid var(--yellow);
+  display:grid;place-items:center;
+  position:relative;
+  color:var(--ink);
+  font-family:'Archivo Black',sans-serif;font-size:1rem;
+  box-shadow:0 8px 24px rgba(245,197,24,.35), inset 0 -4px 0 rgba(0,0,0,.15);
+  cursor:pointer;
+  touch-action:none;
+}
+.rr-action:active{transform:scale(.96)}
+.rr-action-glyph{font-size:2.2rem;line-height:1}
+.rr-action-power{
+  position:absolute;left:8%;right:8%;bottom:8%;height:6px;
+  background:rgba(14,14,16,.4);border-radius:6px;overflow:hidden;
+}
+.rr-action-power-bar{
+  display:block;height:100%;width:0;
+  background:#FF3A4C;
+  transition:width .04s linear;
+}
+.rr-action.charging .rr-action-power-bar{background:linear-gradient(90deg,#FF3A4C 0%,#FFD23F 100%)}
+
+.rr-result{
+  position:absolute;inset:0;
+  background:rgba(14,14,16,.92);
+  display:flex;align-items:center;justify-content:center;
+  z-index:6;
+  padding:1.5rem;
+}
+.rr-result[hidden]{display:none}
+.rr-result-card{
+  text-align:center;color:var(--paper);
+  display:flex;flex-direction:column;align-items:center;gap:.6rem;
+}
+.rr-result-score{
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(4rem,16vw,7rem);
+  color:var(--yellow);line-height:.9;letter-spacing:-.03em;
+}
+.rr-result-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;letter-spacing:.22em;
+  text-transform:uppercase;opacity:.6;
+}
+.rr-result-rank{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.4rem;letter-spacing:.08em;
+  color:var(--paper);text-transform:uppercase;
+  margin-top:.4rem;
+}
+.rr-result-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem;justify-content:center}
+
+.rr-instr{
+  text-align:center;
+  font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.12em;
+  color:var(--paper);opacity:.55;
+  margin:0;
+  text-transform:uppercase;
+}
+
+/* Hide joystick on desktop where keyboard is primary */
+@media (min-width:760px) and (hover:hover){
+  .rr-touch-controls{opacity:.45}
+  .rr-touch-controls:focus-within,.rr-touch-controls:active{opacity:1}
+}
+
+/* ===== GAME ===== */
+.game-section{
+  background:var(--ink);color:var(--paper);
+  position:relative;overflow:hidden;
+}
+.game-section::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 30% 20%, rgba(245,197,24,.12), transparent 50%),
+                   radial-gradient(circle at 80% 100%, rgba(139,26,43,.4), transparent 50%);
+  pointer-events:none;
+}
+.game-section .section-title{color:var(--paper)}
+.game-section .section-title .yellow{background:var(--yellow);color:var(--ink)}
+.game-section .section-kicker{color:var(--yellow)}
+.game-section .section-kicker::before{background:var(--yellow)}
+
+.game-wrap{
+  position:relative;
+  background:var(--ink-2);
+  border-radius:var(--r-lg);
+  padding:1rem;
+  max-width:720px;margin:1.5rem auto 0;
+  border:1px solid var(--line-light);
+}
+.game-canvas{
+  width:100%;display:block;
+  background:#0a0a0c;
+  border-radius:var(--r-md);
+  touch-action:none;
+}
+.game-hud{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:.8rem .15rem .3rem;
+  font-family:'JetBrains Mono',monospace;color:var(--paper);
+  font-size:.78rem;letter-spacing:.05em;
+}
+.game-hud .left,.game-hud .right{display:flex;gap:1rem;align-items:center}
+.game-hud .v{color:var(--yellow);font-weight:700;margin-left:.3rem}
+.game-hud .lbl{opacity:.6;text-transform:uppercase;font-size:.65rem;letter-spacing:.18em}
+
+.sound-tog{
+  background:rgba(255,255,255,.06);color:var(--paper);
+  border:1px solid var(--line-light);
+  width:38px;height:38px;font-size:1rem;line-height:1;border-radius:10px;
+  display:grid;place-items:center;
+}
+.sound-tog:hover{background:var(--yellow);color:var(--ink)}
+
+.game-controls{
+  margin-top:.9rem;display:flex;justify-content:center;gap:.6rem;flex-wrap:wrap;
+}
+.game-instr{
+  text-align:center;color:var(--paper);
+  font-family:'JetBrains Mono',monospace;font-size:.7rem;
+  letter-spacing:.08em;margin-top:.7rem;opacity:.55;line-height:1.5;
+}
+
+.rank-banner{
+  text-align:center;margin-top:1rem;
+  font-family:'Archivo Black',sans-serif;color:var(--yellow);
+  font-size:1.4rem;letter-spacing:-.01em;text-transform:uppercase;
+  min-height:1.4rem;
+}
+
+/* ===== PLAY MORE HOCKEY ===== */
+.play-section{
+  background:var(--ink);color:var(--paper);
+  position:relative;overflow:hidden;
+}
+.play-section::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(circle at 15% 20%, rgba(245,197,24,.12), transparent 50%),
+                   radial-gradient(circle at 85% 90%, rgba(139,26,43,.45), transparent 55%);
+  pointer-events:none;
+}
+.play-section .section-title{color:var(--paper)}
+.play-section .section-title .accent{color:var(--yellow)}
+.play-section .section-kicker{color:var(--yellow)}
+.play-section .section-kicker::before{background:var(--yellow)}
+.play-lede{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.2rem;letter-spacing:.1em;
+  color:var(--paper);opacity:.75;
+  text-transform:uppercase;
+  margin:.4rem 0 1.6rem;
+  position:relative;z-index:1;
+}
+.play-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr;gap:1rem;
+}
+@media (min-width:760px){.play-grid{grid-template-columns:repeat(2,1fr);gap:1.4rem}}
+.play-card{
+  display:flex;flex-direction:column;gap:.6rem;
+  padding:1.6rem 1.5rem;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--line-light);
+  border-radius:var(--r-lg);
+  color:var(--paper);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s, background .25s;
+  position:relative;overflow:hidden;
+  min-height:200px;
+  justify-content:flex-end;
+}
+.play-card::after{
+  content:"";position:absolute;inset:auto -20% -50% auto;
+  width:260px;height:260px;border-radius:50%;
+  background:radial-gradient(circle, var(--yellow) 0%, transparent 70%);
+  opacity:.18;pointer-events:none;z-index:0;
+}
+.play-card.ice::after{background:radial-gradient(circle, #6fa3d9 0%, transparent 70%);opacity:.22}
+.play-card.roller::after{background:radial-gradient(circle, var(--maroon-bright) 0%, transparent 70%);opacity:.28}
+.play-card > *{position:relative;z-index:1}
+.play-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--yellow);
+  background:rgba(255,255,255,.06);
+  box-shadow:0 18px 40px rgba(0,0,0,.45);
+}
+.play-card .play-ico{
+  position:absolute;top:1.2rem;right:1.2rem;
+  font-size:2.4rem;line-height:1;
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.4));
+  z-index:1;
+}
+.play-card .play-sport{
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:.22em;font-size:.7rem;
+  text-transform:uppercase;color:var(--yellow);
+}
+.play-card .play-place{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;letter-spacing:.08em;
+  color:var(--paper);opacity:.6;
+  margin-top:.2rem;
+}
+.play-card .play-title{
+  font-family:'Archivo Black','Anton',sans-serif;text-transform:uppercase;
+  font-size:clamp(1.4rem,3.4vw,2rem);
+  letter-spacing:-.01em;line-height:1;
+  margin:.4rem 0 .2rem;
+  color:var(--paper);
+}
+.play-card .play-cta{
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:.12em;font-size:1rem;
+  color:var(--yellow);
+  text-transform:uppercase;
+}
+
+/* Floating play CTA */
+.play-fab{
+  position:fixed;
+  right:1rem;bottom:1rem;
+  display:none;align-items:center;gap:.5rem;
+  padding:.85rem 1.2rem .85rem 1rem;
+  background:var(--yellow);color:var(--ink);
+  border-radius:999px;
+  box-shadow:0 8px 22px rgba(14,14,16,.35), 0 2px 0 rgba(14,14,16,.18);
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:.12em;font-size:1rem;
+  text-transform:uppercase;
+  z-index:900;
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.play-fab.visible{display:inline-flex}
+.play-fab:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(14,14,16,.4), 0 2px 0 rgba(14,14,16,.18);background:#FFD23F}
+.play-fab-ico{font-size:1.25rem;line-height:1}
+@media (max-width:520px){
+  .play-fab-txt{display:none}
+  .play-fab{padding:.85rem .9rem}
+}
+
+/* Play menu popover */
+.play-menu{
+  position:fixed;
+  right:1rem;bottom:5rem;
+  background:var(--ink);color:var(--paper);
+  border:1px solid var(--line-light);
+  border-radius:14px;
+  padding:.6rem;
+  display:none;flex-direction:column;gap:.4rem;
+  box-shadow:0 18px 40px rgba(0,0,0,.5);
+  z-index:899;
+  min-width:230px;
+}
+.play-menu.open{display:flex}
+.play-menu a{
+  display:flex;align-items:center;gap:.6rem;
+  padding:.7rem .85rem;
+  border-radius:10px;
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:.08em;font-size:1rem;
+  color:var(--paper);
+  background:rgba(255,255,255,.03);
+  transition:background .15s, color .15s;
+}
+.play-menu a:hover{background:var(--yellow);color:var(--ink)}
+.play-menu a .ic{font-size:1.1rem}
+.play-menu a small{
+  display:block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.6rem;letter-spacing:.16em;
+  opacity:.7;font-weight:400;text-transform:uppercase;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--ink);color:var(--paper);
+  padding:3.5rem 1rem 2rem;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+footer::before{
+  content:"";position:absolute;left:50%;top:-1px;transform:translateX(-50%);
+  width:80px;height:4px;background:var(--yellow);border-radius:0 0 6px 6px;
+}
+footer .word-sm{
+  font-family:'Archivo Black',sans-serif;font-size:clamp(2.6rem,9vw,5rem);
+  letter-spacing:-.04em;line-height:.9;
+  color:var(--paper);
+  margin-bottom:1.2rem;
+}
+footer .word-sm .accent{color:var(--yellow)}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:1rem 0 1.6rem}
+footer .links a{
+  border:1px solid var(--line-light);padding:.6rem 1rem;
+  font-family:'Bebas Neue',sans-serif;letter-spacing:.1em;font-size:.95rem;
+  text-transform:uppercase;border-radius:999px;
+  transition:background .15s, color .15s, border-color .15s;
+}
+footer .links a:hover{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+footer .tag-final{
+  color:var(--paper);opacity:.85;
+  font-family:'Bebas Neue',sans-serif;letter-spacing:.12em;font-size:1rem;
+  margin:1.4rem 0 .25rem;text-transform:uppercase;
+}
+footer .credit{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.18em;opacity:.45;text-transform:uppercase}
+.jm-credit{margin-top:.4rem;opacity:.6}
+.jm-credit a{
+  color:var(--yellow);
+  text-decoration:none;
+  letter-spacing:.18em;
+  transition:opacity .15s;
+}
+.jm-credit a:hover{opacity:.85;text-decoration:underline}
+
+/* ===== UTILITY ===== */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.fade-up.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .fade-up{opacity:1;transform:none;transition:none}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">
+      <span class="w-mark">
+        <img src="brand/team-team-logo-clean.png" alt="Team Team Worms" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'W',className:'w-fallback'}))">
+      </span>
+      <span class="brand-text">Team Team Worms</span>
+    </a>
+    <div class="nav-links nav-links-desktop" id="navLinksDesktop">
+      <a href="#championships">Cups</a>
+      <a href="#roster">Roster</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#play-more">Play</a>
+      <a href="#game">Shootout</a>
+      <a class="cta" href="https://www.instagram.com/teamteamworms/" target="_blank" rel="noopener">@teamteamworms</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" id="navTog" aria-expanded="false" aria-controls="navLinks">☰</button>
+  </div>
+</nav>
+<!-- Mobile drawer lives outside the nav so backdrop-filter doesn't trap position:fixed -->
+<div class="nav-drawer" id="navLinks" aria-hidden="true">
+  <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+    <span aria-hidden="true">✕</span>
+    <span class="drawer-close-label">Close</span>
+  </button>
+  <a href="#championships">Cups</a>
+  <a href="#roster">Roster</a>
+  <a href="#schedule">Schedule</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#play-more">Play</a>
+  <a href="#game">Shootout</a>
+  <a class="cta" href="https://www.instagram.com/teamteamworms/" target="_blank" rel="noopener">@teamteamworms</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+  <div class="worm-bg" aria-hidden="true" id="wormBg"></div>
+  <img class="hero-mascot" src="brand/worms-mascot-clean.png" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  <div class="hero-inner">
+    <span class="kicker-pill">EST. 2013 · COLUMBUS OH</span>
+    <h1 class="wordmark" aria-label="Team Team Worms">
+      <span class="stack outline">TEAM</span>
+      <span class="stack">TEAM</span>
+      <span class="stack accent">WORMS</span>
+    </h1>
+    <div class="tag">// WORMS ARE WIGGLING</div>
+    <div class="venues">HEATWAVE ARENA · THE CHILLER</div>
+
+    <div class="stats-row" role="list">
+      <div class="stat" role="listitem"><div class="num" data-count="6">0</div><div class="lbl">Championships</div></div>
+      <div class="stat" role="listitem"><div class="num" data-count="19">0</div><div class="lbl">Season Wins</div></div>
+      <div class="stat" role="listitem"><div class="num" data-count="∞">0</div><div class="lbl">Beers</div></div>
+    </div>
+
+    <div class="cta-row">
+      <a href="#roster" class="btn lg">Meet the team →</a>
+      <a href="#game" class="btn ghost lg">Play shootout 🏒</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== CHAMPIONSHIPS ===== -->
+<section class="section fade-up" id="championships">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div class="section-kicker">Banner hangers</div>
+      <h2 class="section-title">Six <span class="accent">cups.</span> Beer league dynasty. <span class="worm-deco" aria-hidden="true">🪱</span></h2>
+    </div>
+    <div class="champ-grid" id="champGrid"></div>
+  </div>
+</section>
+
+<!-- ===== SCHEDULE ===== -->
+<section class="section fade-up" id="schedule">
+  <div class="section-inner section-wide">
+    <div class="sec-head">
+      <div class="section-kicker">What's next</div>
+      <h2 class="section-title">The <span class="accent">schedule.</span> <span class="worm-deco" aria-hidden="true">🪱</span></h2>
+    </div>
+    <div class="sched sched-split">
+      <div class="sched-col upcoming">
+        <div class="sched-col-head">
+          <h3><span class="ico">🏒</span> Ice · Summer 2026</h3>
+          <a class="btn ink btn-sm" href="https://chillerstats.com/login.cfm" target="_blank" rel="noopener">Full schedule on ChillerStats →</a>
+        </div>
+        <div id="upcomingIce"></div>
+      </div>
+      <div class="sched-col upcoming">
+        <div class="sched-col-head">
+          <h3><span class="ico">🛼</span> Roller · Spring 2026</h3>
+          <a class="btn ink btn-sm" href="https://www.heatwavearena.com/stats#/2629/team/654137/schedule" target="_blank" rel="noopener">Full schedule on Heatwave →</a>
+        </div>
+        <div id="upcomingRoller"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="section gallery-section fade-up" id="gallery">
+  <div class="section-inner">
+    <div class="gallery-head">
+      <div class="sec-head" style="margin-bottom:0">
+        <div class="section-kicker">Locker room wall</div>
+        <h2 class="section-title">Gallery.</h2>
+      </div>
+      <a class="btn ink ig-btn" href="https://www.instagram.com/teamteamworms/" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @teamteamworms
+      </a>
+    </div>
+    <div class="masonry" id="masonry"></div>
+    <div style="text-align:center;margin-top:2rem">
+      <a class="btn" href="https://www.instagram.com/teamteamworms/" target="_blank" rel="noopener">Follow on Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROSTER ===== -->
+<section class="section roster-section fade-up" id="roster">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div class="section-kicker" id="rosterKicker">The wigglers</div>
+      <h2 class="section-title">Meet the <span class="yellow">Worms</span> <span class="worm-deco" aria-hidden="true">🪱</span></h2>
+    </div>
+    <div class="roster-sports" id="rosterSports"></div>
+  </div>
+</section>
+
+<!-- ===== PLAY MORE HOCKEY ===== -->
+<section class="section play-section fade-up" id="play-more">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div class="section-kicker">Lace 'em up</div>
+      <h2 class="section-title">Play more <span class="accent">hockey.</span></h2>
+    </div>
+    <p class="play-lede">Drop in. Skate. Wiggle on.</p>
+    <div class="play-grid">
+      <a class="play-card ice" href="https://www.thechiller.com/hockey/" target="_blank" rel="noopener">
+        <div class="play-ico" aria-hidden="true">🏒</div>
+        <div class="play-meta">
+          <div class="play-sport">Ice Hockey</div>
+          <div class="play-place">The Chiller · Columbus, OH</div>
+        </div>
+        <h3 class="play-title">Leagues, clinics & open hockey →</h3>
+        <div class="play-cta">thechiller.com/hockey</div>
+      </a>
+      <a class="play-card roller" href="https://rink.heatwavearena.com/drop-in" target="_blank" rel="noopener">
+        <div class="play-ico" aria-hidden="true">🛼</div>
+        <div class="play-meta">
+          <div class="play-sport">Roller Hockey</div>
+          <div class="play-place">Heatwave Arena · Columbus, OH</div>
+        </div>
+        <h3 class="play-title">Drop-in skate &amp; pickup →</h3>
+        <div class="play-cta">rink.heatwavearena.com/drop-in</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Floating "Play hockey" CTA -->
+<button class="play-fab" id="playFab" aria-label="Play more hockey" title="Play more hockey" aria-expanded="false" aria-controls="playMenu">
+  <span class="play-fab-ico">🏒</span>
+  <span class="play-fab-txt">Play more hockey</span>
+</button>
+<div class="play-menu" id="playMenu" role="menu" aria-hidden="true">
+  <a href="https://www.thechiller.com/hockey/" target="_blank" rel="noopener" role="menuitem">
+    <span class="ic">🏒</span>
+    <span>Ice Hockey<small>The Chiller</small></span>
+  </a>
+  <a href="https://rink.heatwavearena.com/drop-in" target="_blank" rel="noopener" role="menuitem">
+    <span class="ic">🛼</span>
+    <span>Roller Hockey<small>Heatwave Arena</small></span>
+  </a>
+</div>
+
+<!-- ===== GAME ===== -->
+<section class="section game-section fade-up" id="game">
+  <div class="section-inner" style="position:relative">
+    <div class="sec-head">
+      <div class="section-kicker">Pickup mode</div>
+      <h2 class="section-title" id="gameTitle"><span class="yellow">Rink Rush</span></h2>
+    </div>
+    <p class="game-lede" id="gameLede">60 seconds. Solo skater vs. AI goalie. Beat your top score.</p>
+
+    <div class="game-mode-toggle" role="tablist" aria-label="Mini-game">
+      <button data-mode="RINK_RUSH" class="active" role="tab" aria-selected="true">🏒 Rink Rush</button>
+      <button data-mode="WORM_SHOOTOUT" role="tab" aria-selected="false">🪱 Worm Shootout</button>
+    </div>
+
+    <!-- ===== RINK RUSH PANEL ===== -->
+    <div class="game-panel" id="rinkRushPanel">
+      <div class="rr-wrap">
+        <div class="rr-hud">
+          <div class="rr-hud-cell"><span class="lbl">Score</span><span class="v" id="rrScore">0</span></div>
+          <div class="rr-hud-cell"><span class="lbl">Time</span><span class="v" id="rrTime">60</span></div>
+          <div class="rr-hud-cell"><span class="lbl">Top</span><span class="v" id="rrTop">0</span></div>
+          <button class="sound-tog rr-sound" id="rrSound" aria-label="Toggle sound" title="Sound">🔇</button>
+        </div>
+        <div class="rr-canvas-wrap">
+          <canvas class="rr-canvas" id="rrCanvas" width="540" height="900" aria-label="Rink Rush mini game"></canvas>
+          <div class="rr-power-banner" id="rrPowerBanner"></div>
+          <div class="rr-overlay" id="rrOverlay">
+            <div class="rr-overlay-inner">
+              <div class="rr-overlay-title">Rink Rush</div>
+              <div class="rr-overlay-sub">60 seconds. Beat the goalie.</div>
+              <button class="btn lg" id="rrStart">Start →</button>
+              <div class="rr-overlay-hint">
+                Joystick = skate · Hold puck button = wind up · Release = shoot<br>
+                Swipe up while holding = lift it top-shelf
+              </div>
+            </div>
+          </div>
+          <div class="rr-touch-controls">
+            <div class="rr-joy" id="rrJoy">
+              <div class="rr-joy-nub" id="rrJoyNub"></div>
+            </div>
+            <button class="rr-action" id="rrAction" aria-label="Shoot / pass">
+              <span class="rr-action-glyph">🏒</span>
+              <span class="rr-action-power"><span class="rr-action-power-bar" id="rrActionBar"></span></span>
+            </button>
+          </div>
+        </div>
+        <div class="rr-result" id="rrResult" hidden>
+          <div class="rr-result-card">
+            <div class="rr-result-score" id="rrResultScore">0</div>
+            <div class="rr-result-label">Goals</div>
+            <div class="rr-result-rank" id="rrResultRank">BENCH WARMER</div>
+            <div class="rr-result-actions">
+              <button class="btn lg" id="rrRetry">Play again</button>
+              <button class="btn ghost" id="rrShare">Share score</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rr-instr">
+        Mobile: joystick + tap puck button · Desktop: WASD or arrows · hold SPACE to wind up
+      </div>
+    </div>
+
+    <!-- ===== WORM SHOOTOUT PANEL ===== -->
+    <div class="game-panel" id="wormShootoutPanel" hidden>
+      <div class="game-wrap">
+        <canvas class="game-canvas" id="rink" width="640" height="420" aria-label="Worm Shootout mini game"></canvas>
+        <div class="game-hud">
+          <div class="left">
+            <span><span class="lbl">Shot</span><span class="v" id="hudShot">1</span>/5</span>
+            <span><span class="lbl">Score</span><span class="v" id="hudScore">0</span></span>
+          </div>
+          <div class="right">
+            <span><span class="lbl">Top</span><span class="v" id="hudTop">0</span>/5</span>
+            <button class="sound-tog" id="soundTog" aria-label="Toggle sound" title="Sound">🔇</button>
+          </div>
+        </div>
+        <div class="game-controls">
+          <button class="btn" id="startBtn">Start round</button>
+          <button class="btn ghost" id="resetBtn" style="display:none">Reset</button>
+        </div>
+        <div class="game-instr" id="instr">
+          Hold &amp; drag the rink to aim · release to shoot.<br>Desktop: arrows aim, hold SPACE to charge.
+        </div>
+        <div class="rank-banner" id="rank"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="word-sm">TEAM TEAM <span class="accent">WORMS</span></div>
+  <div class="links">
+    <a href="https://www.instagram.com/teamteamworms/" target="_blank" rel="noopener">@teamteamworms</a>
+    <a href="https://www.heatwavearena.com" target="_blank" rel="noopener">Heatwave Arena</a>
+    <a href="https://www.thechiller.com" target="_blank" rel="noopener">The Chiller</a>
+  </div>
+  <div class="tag-final"><span class="worm-deco" aria-hidden="true">🪱</span> Built with worm guts, duct tape &amp; beer. <span class="worm-deco" aria-hidden="true">🪱</span></div>
+  <div class="credit">© 2026 Team Team Worms · Columbus, Ohio</div>
+  <div class="credit jm-credit">Website Design by <a href="https://janszenmedia.com" target="_blank" rel="noopener">Janszen Media</a></div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="x" id="lbClose" aria-label="Close">×</button>
+  <div class="lightbox-inner">
+    <button class="nav prev" id="lbPrev" aria-label="Previous photo">‹</button>
+    <img id="lbImg" alt="" />
+    <button class="nav next" id="lbNext" aria-label="Next photo">›</button>
+    <div class="cap" id="lbCap"></div>
+    <div class="count" id="lbCount"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   ⚙️  EDIT THIS DATA TO UPDATE THE SITE
+   ========================================================= */
+
+const CHAMPIONSHIPS = [
+  { yr:'2026', name:'Ice Hockey League Champs',               sub:'Team Team Hockey',          date:'May 3, 2026',     place:'The Chiller',    img:'photos/cups/cup-tt-ice-2026.jpg', sport:'ICE' },
+  { yr:'2026', name:'Novice Wish Cup Regional Champs',        sub:'Regional Title',            date:'April 14, 2026',  place:'Heatwave Arena', img:'photos/cups/cup-wishcup-2026.jpg', sport:'ROLLER' },
+  { yr:'2025', name:'Fall League Champs',                     sub:'Sunday B Division',         date:'Fall 2025',       place:'The Chiller',    img:'photos/cups/cup-fall-2025.jpg',    sport:'ICE' },
+  { yr:'2025', name:'Heatwave Showdown Champs',               sub:'Summer Cup',                date:'August 17, 2025', place:'Heatwave Arena', img:'photos/cups/cup-heatwave-2025.jpg',sport:'ROLLER' },
+  { yr:'2025', name:'NHL Stadium Series Iron Man Tournament', sub:'Bronze Division Champions', date:'March 3, 2025',   place:'Heatwave Arena', img:'photos/cups/cup-ironman-2025.jpg', sport:'ROLLER' },
+  { yr:'2019', name:'Shamrocks Ice Hockey Champs',            sub:'League Title',              date:'May 5, 2019',     place:'The Chiller',    img:'photos/cups/cup-shamrocks-2019.jpg', sport:'ICE' }
+];
+
+const ROSTER_ROLLER = [
+  { num:90, name:'Andrew Telfer',       pos:'P' },
+  { num:21, name:'Brandon Kist',        pos:'P' },
+  { num:90, name:'Elvis Merzlikins',    pos:'P' },
+  { num:16, name:'Joshua Stemen',       pos:'P' },
+  { num:93, name:'Matt Kobs',           pos:'P' },
+  { num:20, name:'Michael Williamson',  pos:'G' },
+  { num:28, name:'Nicholas Williamson', pos:'P' },
+  { num:44, name:'Patrick Huang',       pos:'P' },
+  { num:69, name:'Rich Martin',         pos:'P' },
+  { num:18, name:'Ryan Williamson',     pos:'P' },
+  { num:37, name:'Sean Hundley',        pos:'P' },
+  { num:5,  name:'Taylor Janszen',      pos:'P' },
+  { num:30, name:'Timmy Little',        pos:'G' },
+  { num:2,  name:'Wes Crist',           pos:'P' }
+];
+
+const ROSTER_ICE = [
+  // Forwards
+  { num:42, name:'Quinn Baker',         pos:'C' },
+  { num:13, name:'Larry Behum',         pos:'C' },
+  { num:26, name:'Tyler Hissrich',      pos:'C' },
+  { num:5,  name:'Taylor Janszen',      pos:'W' },
+  { num:21, name:'Brandon Kist',        pos:'C' },
+  { num:0,  name:'Nicholas Piccioni',   pos:'C' },
+  { num:10, name:'Brian Starbuck',      pos:'W' },
+  { num:90, name:'Andrew Telfer',       pos:'C' },
+  { num:88, name:'Brandon Wilson',      pos:'C' },
+  { num:6,  name:'Andrew Yeater',       pos:'C' },
+  // Defense
+  { num:19, name:'Adam Abraham',        pos:'D' },
+  { num:24, name:'Derek Johnston',      pos:'D' },
+  { num:2,  name:'Zach Weimann',        pos:'D' },
+  { num:0,  name:'Clyde Williamson',    pos:'D' },
+  { num:18, name:'Michael Williamson',  pos:'D' },
+  // Goalie
+  { num:3,  name:'Doug Gordon',         pos:'G' },
+  // Skaters (unassigned position in roster)
+  { num:0,  name:'Kyle Arens',          pos:'P' },
+  { num:77, name:'Zachary Bohler',      pos:'P' },
+  { num:0,  name:'Byron Bruno',         pos:'P' },
+  { num:42, name:'Peter Lou',           pos:'P' },
+  { num:0,  name:'Joshua Stemen',       pos:'P' },
+  { num:0,  name:'Cameron Studer',      pos:'P' }
+];
+
+
+const UPCOMING_ROLLER = [
+  { d:'May 18', opp:'vs Juicy Juicers',                 where:'Heatwave Arena', time:'8:40 PM' },
+  { d:'Jun 01', opp:'vs OSURH',                         where:'Heatwave Arena', time:'7:50 PM' },
+  { d:'Jun 08', opp:'Gold Playoffs · Quarterfinals',    where:'Heatwave Arena', time:'7:00 PM' },
+  { d:'Jun 15', opp:'Gold Playoffs · Semifinals',       where:'Heatwave Arena', time:'7:00 PM' },
+  { d:'Jun 15', opp:'Gold Championship',                where:'Heatwave Arena', time:'8:40 PM' }
+];
+
+const UPCOMING_ICE = [
+  { d:'May 17', opp:'vs DK Brewzers',       where:'Chiller North · Rink 3',  time:'9:20 PM' },
+  { d:'May 24', opp:'vs Whisky Warriors',   where:'Chiller Easton · Rink 1', time:'10:10 PM' },
+  { d:'May 31', opp:'@ Boo’s Angels',  where:'Chiller Easton · Rink 1', time:'8:00 PM' },
+  { d:'Jun 07', opp:'vs Phantoms',          where:'Chiller Easton · Rink 2', time:'10:30 PM' },
+  { d:'Jun 14', opp:'@ Post NorthStars',    where:'Chiller Easton · Rink 2', time:'9:40 PM' },
+  { d:'Jun 21', opp:'@ BT1',                where:'Chiller Dublin · Rink 2', time:'10:10 PM' },
+  { d:'Jun 28', opp:'vs The Yellow Jackets',where:'Chiller Easton · Rink 2', time:'2:20 PM' },
+  { d:'Jul 05', opp:'@ Green',              where:'Chiller Easton · Rink 1', time:'5:30 PM' },
+  { d:'Jul 12', opp:'vs DDD',               where:'Chiller North · Rink 3',  time:'8:50 PM' },
+  { d:'Jul 19', opp:'@ DK Brewzers',        where:'Chiller Dublin · Rink 2', time:'5:30 PM' },
+  { d:'Jul 26', opp:'@ Whisky Warriors',    where:'Chiller North · Rink 2',  time:'4:20 PM' },
+  { d:'Aug 02', opp:'vs Boo’s Angels', where:'Chiller Dublin · Rink 1', time:'1:40 PM' }
+];
+
+let UPCOMING = UPCOMING_ROLLER;
+
+// Add captions only when you have one. Empty = clean photo card.
+// Order: existing 1-22, then 2 NHL photos slotted at ~75% down, then 23-30
+const PHOTO_ORDER = [
+  1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,
+  31,32,
+  23,24,25,26,27,28,29,30
+];
+const PHOTO_CAPTIONS = {};
+const PHOTOS = PHOTO_ORDER.map(n => ({
+  src: `photos/photo-${String(n).padStart(2,'0')}.jpg`,
+  caption: PHOTO_CAPTIONS[n] || ''
+}));
+
+/* =========================================================
+   🛑  DO NOT EDIT BELOW THIS LINE (unless you know what you're doing)
+   ========================================================= */
+
+/* ----- NAV TOGGLE ----- */
+const navTog = document.getElementById('navTog');
+const navLinks = document.getElementById('navLinks');
+function setMenu(open){
+  navLinks.classList.toggle('open', open);
+  navTog.classList.toggle('is-open', open);
+  navTog.textContent = open ? '✕' : '☰';
+  navTog.setAttribute('aria-expanded', open ? 'true' : 'false');
+  navLinks.setAttribute('aria-hidden', open ? 'false' : 'true');
+  document.body.classList.toggle('menu-open', open);
+}
+navTog.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
+navLinks.addEventListener('click', e => {
+  if (e.target.tagName === 'A') setMenu(false);
+});
+const drawerClose = document.getElementById('drawerClose');
+if (drawerClose) drawerClose.addEventListener('click', () => setMenu(false));
+// Close menu when tapping the brand link (it scrolls to #top)
+document.querySelector('.nav-brand').addEventListener('click', () => {
+  if (navLinks.classList.contains('open')) setMenu(false);
+});
+// Close menu if viewport widens past mobile breakpoint while open
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 760 && navLinks.classList.contains('open')) setMenu(false);
+});
+document.addEventListener('keyup', e => {
+  if (e.key === 'Escape' && navLinks.classList.contains('open')) setMenu(false);
+});
+
+/* ----- HERO COUNTERS ----- */
+function animateCounters(){
+  document.querySelectorAll('.stat .num').forEach(el => {
+    const tgt = el.dataset.count;
+    if (tgt === '∞') { el.textContent = '∞'; return; }
+    const n = parseInt(tgt,10);
+    let i = 0;
+    const step = Math.max(1, Math.floor(n / 30));
+    const tick = () => {
+      i = Math.min(n, i + step);
+      el.textContent = i;
+      if (i < n) requestAnimationFrame(tick);
+    };
+    tick();
+  });
+}
+
+/* ----- FLOATING WORMS ----- */
+function spawnWorms(){
+  const bg = document.getElementById('wormBg');
+  const reduced = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if (reduced) return;
+  const emojis = ['🪱','🪱','🪱','🪱','🐛'];
+  for (let i=0;i<22;i++){
+    const s = document.createElement('span');
+    s.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+    s.style.left = (Math.random()*100)+'%';
+    s.style.fontSize = (1.0 + Math.random()*1.8) + 'rem';
+    s.style.animationDuration = (10 + Math.random()*12) + 's';
+    s.style.animationDelay = (-Math.random()*15) + 's';
+    s.style.opacity = (0.35 + Math.random()*0.45).toFixed(2);
+    bg.appendChild(s);
+  }
+}
+
+/* ----- CHAMPIONSHIPS ----- */
+function renderChamps(){
+  const g = document.getElementById('champGrid');
+  g.innerHTML = CHAMPIONSHIPS.map(c => {
+    const sportLabel = c.sport === 'ICE' ? 'ICE' : 'ROLLER';
+    const sportClass = c.sport === 'ICE' ? 'ice' : '';
+    return `
+    <div class="champ-card">
+      <div class="img-slot">
+        ${c.img ? `<img src="${c.img}" alt="${c.name}" onerror="this.style.display='none'">` : ''}
+      </div>
+      <span class="trophy" aria-hidden="true">🏆</span>
+      <span class="sport-tag ${sportClass}">${sportLabel}</span>
+      <div class="yr">${c.yr}</div>
+      <h3>${c.name}</h3>
+      <div class="place">${c.place}</div>
+      <div class="date">${c.date} · ${c.sub}</div>
+    </div>`;
+  }).join('');
+}
+
+/* ----- ROSTER ----- */
+function rowHtml(p){
+  const hasNum = p.num && p.num !== 0;
+  const numLabel = hasNum ? ('#' + p.num) : '#';
+  const parts = p.name.trim().split(/\s+/);
+  const first = parts.shift() || '';
+  const last  = parts.join(' ');
+  return `
+    <li class="roster-row" aria-label="${p.name} ${numLabel}">
+      <span class="num ${hasNum?'':'is-q'}">${numLabel}</span>
+      <span class="name">
+        <span class="first">${first}</span>${last?`<span class="last">${last}</span>`:''}
+      </span>
+    </li>`;
+}
+
+function renderGroup(label, players){
+  if (!players.length) return '';
+  players = players.slice().sort((a,b) => a.name.localeCompare(b.name));
+  return `
+    <div class="roster-group">
+      <div class="roster-group-label">${label} <span style="opacity:.6">· ${players.length}</span></div>
+      <ul class="roster-list">${players.map(rowHtml).join('')}</ul>
+    </div>`;
+}
+
+function renderRollerBlock(){
+  const skaters = ROSTER_ROLLER.filter(p => p.pos !== 'G');
+  const goalies = ROSTER_ROLLER.filter(p => p.pos === 'G');
+  return `
+    <div class="roster-sport">
+      <div class="roster-sport-head">
+        <span class="ico" aria-hidden="true">🛼</span>
+        <h3>Roller</h3>
+        <span class="count">${ROSTER_ROLLER.length} Players</span>
+      </div>
+      ${renderGroup('Skaters', skaters)}
+      ${renderGroup('Goalies', goalies)}
+    </div>`;
+}
+
+function renderIceBlock(){
+  const forwards = ROSTER_ICE.filter(p => p.pos === 'C' || p.pos === 'W');
+  const defense  = ROSTER_ICE.filter(p => p.pos === 'D');
+  const goalies  = ROSTER_ICE.filter(p => p.pos === 'G');
+  const others   = ROSTER_ICE.filter(p => p.pos === 'P');
+  return `
+    <div class="roster-sport">
+      <div class="roster-sport-head">
+        <span class="ico" aria-hidden="true">🏒</span>
+        <h3>Ice</h3>
+        <span class="count">${ROSTER_ICE.length} Players</span>
+      </div>
+      ${renderGroup('Forwards', forwards)}
+      ${renderGroup('Defense', defense)}
+      ${renderGroup('Goalies', goalies)}
+      ${renderGroup('Skaters', others)}
+    </div>`;
+}
+
+function renderRoster(){
+  const root = document.getElementById('rosterSports');
+  if (!root) return;
+  root.innerHTML = renderIceBlock() + renderRollerBlock();
+  const total = new Set(
+    [...ROSTER_ROLLER, ...ROSTER_ICE].map(p => p.name.trim().toLowerCase())
+  ).size;
+  const rk = document.getElementById('rosterKicker');
+  if (rk) rk.textContent = total + ' unique wigglers';
+}
+
+/* ----- SCHEDULE ----- */
+function renderGameList(games){
+  return games.map(g => `
+    <div class="game">
+      <div class="d">${g.d}</div>
+      <div class="opp">${g.opp}<span class="meta-line">${g.where} · ${g.time}</span></div>
+      <span class="pill up">NEXT</span>
+    </div>`).join('');
+}
+function renderSchedule(){
+  const r = document.getElementById('upcomingRoller');
+  const i = document.getElementById('upcomingIce');
+  if (r) r.innerHTML = renderGameList(UPCOMING_ROLLER);
+  if (i) i.innerHTML = renderGameList(UPCOMING_ICE);
+}
+
+
+/* ----- GALLERY ----- */
+function renderGallery(){
+  const m = document.getElementById('masonry');
+  m.innerHTML = PHOTOS.map((p,i) => `
+    <div class="gcard" data-idx="${i}">
+      <div class="img" style="background-image:url('${p.src}')" data-src="${p.src}" aria-label="${p.caption || 'Team Team Worms photo'}">${p.caption ? p.caption.toUpperCase() : ''}</div>
+      ${p.caption ? `<div class="cap">${p.caption}</div>` : ''}
+    </div>
+  `).join('');
+
+  // Verify each image; if it fails, fall back to a colored block with filename
+  m.querySelectorAll('.img').forEach(div => {
+    const test = new Image();
+    test.onload = () => { div.textContent = ''; };
+    test.onerror = () => {
+      div.style.backgroundImage = 'none';
+      div.textContent = div.dataset.src.split('/').pop().replace(/[-_.]/g,' ').toUpperCase();
+    };
+    test.src = div.dataset.src;
+  });
+
+  m.addEventListener('click', e => {
+    const card = e.target.closest('.gcard');
+    if (!card) return;
+    const i = parseInt(card.dataset.idx,10);
+    openLightbox(i);
+  });
+}
+
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCap = document.getElementById('lbCap');
+const lbCount = document.getElementById('lbCount');
+const lbPrev = document.getElementById('lbPrev');
+const lbNext = document.getElementById('lbNext');
+let lbIndex = 0;
+
+function showLightboxAt(i){
+  if (!PHOTOS.length) return;
+  lbIndex = (i + PHOTOS.length) % PHOTOS.length;
+  const p = PHOTOS[lbIndex];
+  lbImg.src = p.src;
+  lbImg.alt = p.caption || `Team Team Worms photo ${lbIndex+1}`;
+  lbCap.textContent = p.caption || '';
+  lbCount.textContent = `${lbIndex+1} / ${PHOTOS.length}`;
+}
+function openLightbox(i){
+  showLightboxAt(i);
+  lb.classList.add('open');
+}
+function closeLightbox(){ lb.classList.remove('open'); }
+
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+lbPrev.addEventListener('click', e => { e.stopPropagation(); showLightboxAt(lbIndex - 1); });
+lbNext.addEventListener('click', e => { e.stopPropagation(); showLightboxAt(lbIndex + 1); });
+lb.addEventListener('click', e => { if (e.target === lb || e.target.classList.contains('lightbox-inner')) closeLightbox(); });
+
+document.addEventListener('keyup', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') showLightboxAt(lbIndex - 1);
+  if (e.key === 'ArrowRight') showLightboxAt(lbIndex + 1);
+});
+
+// Swipe support (touch + pointer)
+let swipeStartX = null;
+let swipeStartY = null;
+lb.addEventListener('touchstart', e => {
+  swipeStartX = e.touches[0].clientX;
+  swipeStartY = e.touches[0].clientY;
+}, {passive:true});
+lb.addEventListener('touchend', e => {
+  if (swipeStartX === null) return;
+  const t = e.changedTouches[0];
+  const dx = t.clientX - swipeStartX;
+  const dy = t.clientY - swipeStartY;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)){
+    if (dx < 0) showLightboxAt(lbIndex + 1); else showLightboxAt(lbIndex - 1);
+  }
+  swipeStartX = swipeStartY = null;
+});
+
+/* ----- INTERSECTION FADE ----- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('in'); });
+}, { threshold:0.12 });
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+/* =========================================================
+   🎮 GAME MODE TOGGLE
+   ========================================================= */
+const GAME_MODES = {};
+function setGameMode(mode){
+  document.querySelectorAll('.game-mode-toggle button').forEach(b => {
+    const on = b.dataset.mode === mode;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+  document.getElementById('rinkRushPanel').hidden     = mode !== 'RINK_RUSH';
+  document.getElementById('wormShootoutPanel').hidden = mode !== 'WORM_SHOOTOUT';
+  const title = document.getElementById('gameTitle');
+  const lede  = document.getElementById('gameLede');
+  if (mode === 'RINK_RUSH'){
+    title.innerHTML = '<span class="yellow">Rink Rush</span>';
+    lede.textContent = '60 seconds. Solo skater vs. AI goalie. Beat your top score.';
+  } else {
+    title.innerHTML = 'Worm <span class="yellow">Shootout</span>';
+    lede.textContent = 'Five shots. Beat the goalie. Earn your rank.';
+  }
+  // Pause the other game's engine if it exposed pause()
+  Object.entries(GAME_MODES).forEach(([k, api]) => {
+    if (api && typeof api.setActive === 'function') api.setActive(k === mode);
+  });
+}
+document.querySelectorAll('.game-mode-toggle button').forEach(b => {
+  b.addEventListener('click', () => setGameMode(b.dataset.mode));
+});
+
+/* =========================================================
+   🏒 RINK RUSH — top-down 3/4 mobile-first arcade hockey
+   ========================================================= */
+GAME_MODES.RINK_RUSH = (() => {
+  const cv = document.getElementById('rrCanvas');
+  if (!cv) return null;
+  const ctx = cv.getContext('2d');
+  const wrap = cv.parentElement;
+  const scoreEl = document.getElementById('rrScore');
+  const timeEl  = document.getElementById('rrTime');
+  const topEl   = document.getElementById('rrTop');
+  const overlay = document.getElementById('rrOverlay');
+  const result  = document.getElementById('rrResult');
+  const resultScore = document.getElementById('rrResultScore');
+  const resultRank  = document.getElementById('rrResultRank');
+  const powerBanner = document.getElementById('rrPowerBanner');
+  const actionBtn   = document.getElementById('rrAction');
+  const actionBar   = document.getElementById('rrActionBar');
+  const joy         = document.getElementById('rrJoy');
+  const joyNub      = document.getElementById('rrJoyNub');
+  const soundBtn    = document.getElementById('rrSound');
+
+  /* ---- audio (Web Audio API) ---- */
+  let soundOn = false, actx = null;
+  function ensureCtx(){ if (!actx) actx = new (window.AudioContext||window.webkitAudioContext)(); }
+  function tone(freq, dur, type='sine', gain=0.12){
+    if (!soundOn) return;
+    ensureCtx();
+    const o = actx.createOscillator(), g = actx.createGain();
+    o.type = type; o.frequency.value = freq;
+    g.gain.value = gain;
+    o.connect(g).connect(actx.destination);
+    o.start();
+    g.gain.exponentialRampToValueAtTime(0.001, actx.currentTime + dur);
+    o.stop(actx.currentTime + dur);
+  }
+  function sndStick(){ tone(420, .04, 'square', .15) }
+  function sndSlap(){ tone(180,.06,'square',.16); setTimeout(()=>tone(80,.18,'sawtooth',.14),40) }
+  function sndSave(){ tone(140,.12,'sawtooth',.14) }
+  function sndPost(){ tone(900,.18,'square',.12) }
+  function sndHorn(){
+    if (!soundOn) return;
+    [220,260,300,260,220].forEach((f,i)=>setTimeout(()=>tone(f,.45,'square',.18), i*120));
+  }
+  function sndPow(){ tone(520,.10,'sine',.18); setTimeout(()=>tone(780,.10,'sine',.16), 90) }
+  soundBtn.addEventListener('click', () => {
+    soundOn = !soundOn; soundBtn.textContent = soundOn ? '🔊' : '🔇';
+    if (soundOn) ensureCtx();
+  });
+
+  /* ---- state ---- */
+  const TOP_KEY = 'rr_top';
+  const state = {
+    active:false, running:false, paused:false,
+    score:0, time:60, top: parseInt(localStorage.getItem(TOP_KEY)||'0',10),
+    player:{ x:.5, y:.78, vx:0, vy:0, r:0.030, dir:0, skid:0, dashCD:0 },
+    puck:  { x:.5, y:.6,  vx:0, vy:0, r:0.020, attached:true, trail:[], lift:0 },
+    goalie:{ x:.5, vx:0, lungeCD:0, freeze:0 },
+    powerups:[],
+    fx:[],
+    flash:0, shake:0, slow:0,
+    msg:'', msgT:0,
+    powerActive:null, powerT:0,
+    aim:{x:0,y:-1},
+    charging:false, power:0,
+    chargeStartTime:0,
+    swipeStartY:null,
+    liftQueued:false,
+    last:performance.now(),
+    powerSpawnT:0,
+    dashFlash:0
+  };
+  topEl.textContent = state.top;
+
+  /* ---- DPR-aware fit ---- */
+  let W=540, H=900, dpr=1;
+  function fit(){
+    dpr = window.devicePixelRatio || 1;
+    const r = wrap.getBoundingClientRect();
+    cv.width  = Math.round(r.width * dpr);
+    cv.height = Math.round(r.height * dpr);
+    W = r.width; H = r.height;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  fit();
+  window.addEventListener('resize', fit);
+
+  /* ---- geometry helpers (normalized 0..1 inside rink box) ---- */
+  function px(x){ return x * W }
+  function py(y){ return y * H }
+  function goalBox(){
+    const gw = 0.36, gh = 0.07;
+    return { x:(1-gw)/2, y:0.04, w:gw, h:gh };
+  }
+  function rinkBounds(){
+    return { x0:0.03, x1:0.97, y0:0.10, y1:0.96 };
+  }
+
+  /* ---- input: joystick ---- */
+  const joyState = { active:false, id:null, cx:0, cy:0, dx:0, dy:0 };
+  function joyStart(e){
+    const t = e.changedTouches ? e.changedTouches[0] : e;
+    const r = joy.getBoundingClientRect();
+    joyState.active = true;
+    joyState.id = e.pointerId || (e.changedTouches && t.identifier);
+    joyState.cx = r.left + r.width/2;
+    joyState.cy = r.top  + r.height/2;
+    joyMove(e);
+    e.preventDefault();
+  }
+  function joyMove(e){
+    if (!joyState.active) return;
+    const t = e.changedTouches ? Array.from(e.changedTouches).find(tt => tt.identifier === joyState.id) || e.changedTouches[0] : e;
+    let dx = (t.clientX - joyState.cx);
+    let dy = (t.clientY - joyState.cy);
+    const max = 44;
+    const d = Math.hypot(dx,dy);
+    if (d > max){ dx = dx/d*max; dy = dy/d*max; }
+    joyState.dx = dx/max; joyState.dy = dy/max;
+    joyNub.style.transform = `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px))`;
+    e.preventDefault();
+  }
+  function joyEnd(){
+    joyState.active = false;
+    joyState.dx = joyState.dy = 0;
+    joyNub.style.transform = `translate(-50%,-50%)`;
+  }
+  joy.addEventListener('pointerdown', e => { joy.setPointerCapture(e.pointerId); joyStart(e); });
+  joy.addEventListener('pointermove', joyMove);
+  joy.addEventListener('pointerup', joyEnd);
+  joy.addEventListener('pointercancel', joyEnd);
+
+  /* ---- input: action button ---- */
+  function actionDown(e){
+    if (!state.running || state.paused) { startIfNeeded(); return; }
+    state.charging = true;
+    state.power = 0;
+    state.chargeStartTime = performance.now();
+    state.swipeStartY = (e.changedTouches ? e.changedTouches[0].clientY : e.clientY);
+    state.liftQueued = false;
+    actionBtn.classList.add('charging');
+    e.preventDefault();
+  }
+  function actionMove(e){
+    if (!state.charging || state.swipeStartY == null) return;
+    const y = (e.changedTouches ? e.changedTouches[0].clientY : e.clientY);
+    if (state.swipeStartY - y > 28) state.liftQueued = true;
+    e.preventDefault();
+  }
+  function actionUp(e){
+    if (!state.charging) return;
+    state.charging = false;
+    actionBtn.classList.remove('charging');
+    fireShot();
+    e.preventDefault();
+  }
+  actionBtn.addEventListener('pointerdown', e => { actionBtn.setPointerCapture(e.pointerId); actionDown(e); });
+  actionBtn.addEventListener('pointermove', actionMove);
+  actionBtn.addEventListener('pointerup', actionUp);
+  actionBtn.addEventListener('pointercancel', actionUp);
+
+  /* ---- keyboard fallback ---- */
+  const keys = {};
+  document.addEventListener('keydown', e => {
+    if (!state.active) return;
+    keys[e.code] = true;
+    if (e.code === 'Space'){
+      e.preventDefault();
+      if (state.running && !state.paused && !state.charging){
+        state.charging = true; state.power = 0;
+        state.chargeStartTime = performance.now();
+        state.liftQueued = e.shiftKey;
+        actionBtn.classList.add('charging');
+      } else if (!state.running){
+        startIfNeeded();
+      }
+    }
+  });
+  document.addEventListener('keyup', e => {
+    if (!state.active) return;
+    keys[e.code] = false;
+    if (e.code === 'Space' && state.charging){
+      state.charging = false;
+      actionBtn.classList.remove('charging');
+      fireShot();
+    }
+  });
+  function readKbMove(){
+    let x=0, y=0;
+    if (keys['ArrowLeft']||keys['KeyA']) x -= 1;
+    if (keys['ArrowRight']||keys['KeyD']) x += 1;
+    if (keys['ArrowUp']||keys['KeyW']) y -= 1;
+    if (keys['ArrowDown']||keys['KeyS']) y += 1;
+    const m = Math.hypot(x,y);
+    if (m > 0) { x/=m; y/=m; }
+    return {x, y};
+  }
+
+  /* ---- gameplay ---- */
+  function reset(){
+    state.score = 0; state.time = 60;
+    state.player.x = .5; state.player.y = .78; state.player.vx = state.player.vy = 0;
+    state.puck.x = .5; state.puck.y = .6; state.puck.vx = state.puck.vy = 0;
+    state.puck.attached = true; state.puck.trail = []; state.puck.lift = 0;
+    state.goalie.x = .5; state.goalie.vx = 0; state.goalie.freeze = 0;
+    state.powerups = []; state.fx = [];
+    state.flash = 0; state.shake = 0; state.slow = 0;
+    state.powerActive = null; state.powerT = 0;
+    state.msg = ''; state.msgT = 0;
+    state.powerSpawnT = 6;
+    scoreEl.textContent = 0; timeEl.textContent = 60;
+    powerBanner.classList.remove('show');
+  }
+  function startIfNeeded(){
+    if (state.running) return;
+    reset();
+    overlay.classList.add('hidden');
+    result.hidden = true;
+    state.running = true; state.paused = false;
+  }
+
+  function fireShot(){
+    if (!state.running) return;
+    const heldMs = performance.now() - state.chargeStartTime;
+    const heldPower = Math.min(1, heldMs / 900);
+    if (state.puck.attached){
+      const sh = state.player;
+      // aim direction: from player toward goal center, modulated by puck position
+      const g = goalBox();
+      let dx = (g.x + g.w/2) - sh.x;
+      let dy = (g.y + g.h/2) - sh.y;
+      // light inaccuracy when weak shot
+      const inacc = Math.pow(1 - heldPower, 1.6) * 0.25;
+      dx += (Math.random()-0.5) * inacc;
+      dy += (Math.random()-0.5) * inacc * 0.5;
+      const d = Math.hypot(dx,dy) || 1;
+      const speed = 0.020 + heldPower * 0.040; // strong slap is fast
+      state.puck.vx = (dx/d) * speed;
+      state.puck.vy = (dy/d) * speed;
+      state.puck.attached = false;
+      state.puck.x = sh.x + (dx/d) * (sh.r + state.puck.r + 0.005);
+      state.puck.y = sh.y + (dy/d) * (sh.r + state.puck.r + 0.005);
+      state.puck.lift = state.liftQueued ? Math.min(1, heldPower + 0.2) : 0;
+      // screen shake proportional to power
+      state.shake = 6 + heldPower * 14;
+      if (heldPower > 0.65) sndSlap(); else sndStick();
+      spawnSpray(sh.x, sh.y, '#FFE066', 6);
+    }
+    actionBar.style.width = '0%';
+    state.power = 0;
+    state.liftQueued = false;
+  }
+
+  function spawnSpray(x, y, color, n){
+    for (let i=0;i<n;i++){
+      state.fx.push({
+        x:x, y:y,
+        vx:(Math.random()-.5) * 0.012,
+        vy:(Math.random()-.5) * 0.012 - 0.004,
+        life:1, color, type:'spark'
+      });
+    }
+  }
+  function spawnSkid(x, y){
+    state.fx.push({
+      x, y, vx:0, vy:0, life:1.2, color:'#7d8a99', type:'skid', r:.012
+    });
+  }
+  function spawnGoalBurst(x, y){
+    for (let i=0;i<26;i++){
+      const a = Math.random() * Math.PI * 2;
+      const s = 0.008 + Math.random() * 0.020;
+      state.fx.push({
+        x, y, vx:Math.cos(a)*s, vy:Math.sin(a)*s, life:1.4,
+        color: ['#FFE066','#FF8A3D','#FFFFFF','#FF3A4C'][i%4], type:'spark'
+      });
+    }
+  }
+
+  /* ---- power-ups ---- */
+  const POWERS = [
+    { id:'SPEED',  color:'#FFE066', label:'Speed boost' },
+    { id:'FREEZE', color:'#79E0FF', label:'Freeze goalie' },
+    { id:'DOUBLE', color:'#FF8A3D', label:'Double points' },
+  ];
+  function spawnPowerup(){
+    const p = POWERS[Math.floor(Math.random()*POWERS.length)];
+    const fromLeft = Math.random() < 0.5;
+    const y = 0.28 + Math.random() * 0.35;
+    state.powerups.push({
+      id:p.id, color:p.color, label:p.label,
+      x: fromLeft ? -0.05 : 1.05,
+      y, vx: (fromLeft ? 1 : -1) * 0.0035, vy: 0,
+      r: 0.022, life: 12
+    });
+  }
+  function applyPowerup(p){
+    state.powerActive = p.id;
+    state.powerT = 5;
+    powerBanner.textContent = p.label;
+    powerBanner.classList.add('show');
+    sndPow();
+    if (p.id === 'FREEZE') state.goalie.freeze = 3.0;
+  }
+
+  /* ---- step ---- */
+  function step(dt){
+    if (!state.running || state.paused) return;
+    // Slow-mo
+    const slowFactor = state.slow > 0 ? 0.35 : 1;
+    dt *= slowFactor;
+    if (state.slow > 0) state.slow = Math.max(0, state.slow - dt*2);
+
+    // timer
+    state.time -= dt;
+    if (state.time <= 0){ state.time = 0; endGame(); }
+    timeEl.textContent = Math.ceil(state.time);
+
+    // charging power
+    if (state.charging){
+      const t = (performance.now() - state.chargeStartTime) / 900;
+      state.power = Math.min(1, t);
+      actionBar.style.width = (state.power * 100) + '%';
+    }
+
+    // input vector
+    let ix = joyState.dx, iy = joyState.dy;
+    if (Math.abs(ix) < 0.001 && Math.abs(iy) < 0.001){
+      const k = readKbMove(); ix = k.x; iy = k.y;
+    }
+    const speedMul = (state.powerActive === 'SPEED' ? 1.35 : 1) * (state.charging ? 0.55 : 1);
+    const accel = 1.6 * speedMul * dt;
+    state.player.vx += ix * accel;
+    state.player.vy += iy * accel;
+    // friction
+    const fric = 0.86;
+    state.player.vx *= fric; state.player.vy *= fric;
+    // cap
+    const maxV = 0.012 * speedMul;
+    const sp = Math.hypot(state.player.vx, state.player.vy);
+    if (sp > maxV){ state.player.vx = state.player.vx/sp * maxV; state.player.vy = state.player.vy/sp * maxV; }
+    // skid: when input direction strongly differs from current velocity, emit a skid mark
+    if (sp > 0.004 && (ix||iy)){
+      const inputAng = Math.atan2(iy, ix);
+      const velAng   = Math.atan2(state.player.vy, state.player.vx);
+      let d = Math.abs(inputAng - velAng);
+      d = Math.min(d, Math.PI*2 - d);
+      if (d > Math.PI*0.6 && Math.random() < 0.45){
+        spawnSkid(state.player.x, state.player.y);
+      }
+    }
+    state.player.x += state.player.vx;
+    state.player.y += state.player.vy;
+    const rb = rinkBounds();
+    state.player.x = Math.max(rb.x0 + state.player.r, Math.min(rb.x1 - state.player.r, state.player.x));
+    state.player.y = Math.max(0.40, Math.min(rb.y1 - state.player.r, state.player.y));
+    if (sp > 0.001) state.player.dir = Math.atan2(state.player.vy, state.player.vx);
+
+    // puck pickup / control
+    if (!state.puck.attached){
+      const pdx = state.puck.x - state.player.x;
+      const pdy = state.puck.y - state.player.y;
+      if (Math.hypot(pdx,pdy) < state.player.r + state.puck.r + 0.005 && state.puck.lift <= 0.05){
+        state.puck.attached = true;
+        state.puck.vx = state.puck.vy = 0;
+        state.puck.lift = 0;
+      }
+    }
+
+    if (state.puck.attached){
+      // hold puck in front of player based on movement dir, or below player when idle
+      const offX = Math.cos(state.player.dir) * (state.player.r + state.puck.r + 0.004);
+      const offY = Math.sin(state.player.dir) * (state.player.r + state.puck.r + 0.004);
+      const fwdX = (Math.hypot(state.player.vx,state.player.vy) > 0.001) ? offX : 0;
+      const fwdY = (Math.hypot(state.player.vx,state.player.vy) > 0.001) ? offY : -(state.player.r + state.puck.r + 0.004);
+      state.puck.x = state.player.x + fwdX;
+      state.puck.y = state.player.y + fwdY;
+    } else {
+      // puck physics
+      state.puck.x += state.puck.vx;
+      state.puck.y += state.puck.vy;
+      // lift descends
+      if (state.puck.lift > 0) state.puck.lift = Math.max(0, state.puck.lift - dt * 0.9);
+      // friction (low)
+      state.puck.vx *= 0.992;
+      state.puck.vy *= 0.992;
+      // boards
+      if (state.puck.x < rb.x0){ state.puck.x = rb.x0; state.puck.vx = -state.puck.vx * 0.65; sndPost(); }
+      if (state.puck.x > rb.x1){ state.puck.x = rb.x1; state.puck.vx = -state.puck.vx * 0.65; sndPost(); }
+      if (state.puck.y > rb.y1){ state.puck.y = rb.y1; state.puck.vy = -state.puck.vy * 0.65; }
+      // motion trail
+      const sp = Math.hypot(state.puck.vx, state.puck.vy);
+      if (sp > 0.010){
+        state.puck.trail.push({x:state.puck.x, y:state.puck.y, life:0.4});
+        if (state.puck.trail.length > 14) state.puck.trail.shift();
+      }
+    }
+    // decay trail
+    state.puck.trail.forEach(p => p.life -= dt * 2.5);
+    state.puck.trail = state.puck.trail.filter(p => p.life > 0);
+
+    // Goalie AI
+    const g = goalBox();
+    const gWidth = g.w * 0.35;
+    const gMinX = g.x + gWidth/2;
+    const gMaxX = g.x + g.w - gWidth/2;
+    state.goalie.freeze = Math.max(0, state.goalie.freeze - dt);
+    if (state.goalie.freeze <= 0){
+      // Track: if puck is heading toward goal, predict X intercept; else track puck X with delay
+      let targetX;
+      const puckHeadingUp = state.puck.vy < -0.001 && !state.puck.attached;
+      if (puckHeadingUp){
+        const t = (g.y + g.h/2 - state.puck.y) / state.puck.vy;
+        targetX = state.puck.x + state.puck.vx * Math.max(0, t);
+        targetX += (Math.random() - 0.5) * 0.06; // imperfection
+      } else {
+        targetX = state.puck.x + (Math.random() - 0.5) * 0.05;
+      }
+      targetX = Math.max(gMinX, Math.min(gMaxX, targetX));
+      const diff = targetX - state.goalie.x;
+      const moveSpeed = (puckHeadingUp ? 0.024 : 0.012) * (dt * 60);
+      state.goalie.x += Math.max(-moveSpeed, Math.min(moveSpeed, diff));
+    }
+
+    // Puck vs goalie collision
+    if (!state.puck.attached){
+      const gy = g.y + g.h * 0.5;
+      const goalieBox = { x:state.goalie.x - gWidth/2, y:g.y + g.h*0.30, w:gWidth, h:g.h*0.55 };
+      if (state.puck.x > goalieBox.x && state.puck.x < goalieBox.x + goalieBox.w &&
+          state.puck.y > goalieBox.y && state.puck.y < goalieBox.y + goalieBox.h &&
+          state.puck.lift < 0.55){
+        // SAVE — bounce back
+        state.puck.vy = Math.abs(state.puck.vy) * 0.6 + 0.005;
+        state.puck.vx = state.puck.vx * 0.4 + (state.puck.x < state.goalie.x ? -0.005 : 0.005);
+        state.flash = 0.4;
+        state.msg = 'SAVE!'; state.msgT = 0.8;
+        sndSave();
+        spawnSpray(state.puck.x, state.puck.y, '#79E0FF', 8);
+      }
+      // GOAL — puck crossed into goal box
+      if (state.puck.y <= g.y + g.h*0.55 &&
+          state.puck.x > g.x + g.w*0.08 && state.puck.x < g.x + g.w - g.w*0.08){
+        // count goal
+        const pts = (state.powerActive === 'DOUBLE') ? 2 : 1;
+        state.score += pts;
+        scoreEl.textContent = state.score;
+        spawnGoalBurst(state.puck.x, state.puck.y);
+        state.shake = 24;
+        state.flash = 0.7;
+        state.slow = 0.5; // brief slow-mo
+        state.msg = pts > 1 ? 'GOAL ×2!' : 'GOAL!';
+        state.msgT = 1.5;
+        sndHorn();
+        // haptic
+        if (navigator.vibrate) navigator.vibrate(40);
+        // respawn
+        respawnPuck();
+      }
+      // Puck rolled past top without scoring (post / wide) → respawn after delay
+      if (state.puck.y < 0.02){
+        sndPost();
+        state.msg = 'WIDE'; state.msgT = 0.8;
+        respawnPuck();
+      }
+    }
+
+    // Power-up spawn timer
+    state.powerSpawnT -= dt;
+    if (state.powerSpawnT <= 0){
+      spawnPowerup();
+      state.powerSpawnT = 8 + Math.random()*6;
+    }
+    // Power-up motion + pickup
+    state.powerups.forEach(p => {
+      p.x += p.vx; p.y += Math.sin(performance.now()/300 + p.x*5) * 0.0006;
+      p.life -= dt;
+    });
+    for (let i=state.powerups.length-1;i>=0;i--){
+      const p = state.powerups[i];
+      if (p.life <= 0 || p.x < -0.1 || p.x > 1.1){ state.powerups.splice(i,1); continue; }
+      const d = Math.hypot(p.x - state.player.x, p.y - state.player.y);
+      if (d < p.r + state.player.r){
+        applyPowerup(p);
+        state.powerups.splice(i,1);
+      }
+    }
+
+    // Power timer
+    if (state.powerActive){
+      state.powerT -= dt;
+      if (state.powerT <= 0){
+        state.powerActive = null;
+        powerBanner.classList.remove('show');
+      }
+    }
+
+    // FX update
+    state.fx.forEach(p => {
+      if (p.type !== 'skid'){
+        p.x += p.vx; p.y += p.vy;
+        p.vy += 0.0001;
+      }
+      p.life -= dt * (p.type === 'skid' ? 0.5 : 1.4);
+    });
+    state.fx = state.fx.filter(p => p.life > 0);
+    if (state.flash > 0) state.flash = Math.max(0, state.flash - dt*2);
+    if (state.shake > 0) state.shake = Math.max(0, state.shake - dt*60);
+    if (state.msgT > 0) state.msgT -= dt;
+  }
+
+  function respawnPuck(){
+    setTimeout(() => {
+      state.puck.x = .5; state.puck.y = .58;
+      state.puck.vx = 0; state.puck.vy = 0;
+      state.puck.attached = false; state.puck.lift = 0;
+      state.puck.trail = [];
+    }, 350);
+  }
+
+  function endGame(){
+    state.running = false;
+    if (state.score > state.top){
+      state.top = state.score;
+      localStorage.setItem(TOP_KEY, state.top);
+      topEl.textContent = state.top;
+    }
+    resultScore.textContent = state.score;
+    resultRank.textContent = rankFor(state.score);
+    result.hidden = false;
+  }
+  function rankFor(s){
+    if (s >= 12) return 'PUCK GOD 👑';
+    if (s >= 8)  return 'SNIPER 🥇';
+    if (s >= 5)  return 'WIGGLE LORD 🪱';
+    if (s >= 2)  return 'BENCH BOSS';
+    return 'BENCH WARMER';
+  }
+
+  /* ---- draw ---- */
+  function draw(){
+    ctx.save();
+    if (state.shake > 0){
+      const s = state.shake;
+      ctx.translate((Math.random()-.5)*s, (Math.random()-.5)*s);
+    }
+    // background
+    const grd = ctx.createLinearGradient(0,0,0,H);
+    grd.addColorStop(0,'#0B1426'); grd.addColorStop(1,'#0A0A12');
+    ctx.fillStyle = grd; ctx.fillRect(0,0,W,H);
+
+    // rink surface — 3/4 perspective via slight trapezoid + sheen
+    const rb = rinkBounds();
+    const rx0 = px(rb.x0), rx1 = px(rb.x1);
+    const ry0 = py(rb.y0), ry1 = py(rb.y1);
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(rx0 + 18, ry0);
+    ctx.lineTo(rx1 - 18, ry0);
+    ctx.lineTo(rx1, ry1);
+    ctx.lineTo(rx0, ry1);
+    ctx.closePath();
+    ctx.clip();
+    // ice sheen gradient
+    const ice = ctx.createLinearGradient(0, ry0, 0, ry1);
+    ice.addColorStop(0, '#1a2b48'); ice.addColorStop(0.5, '#22324e'); ice.addColorStop(1, '#1b2740');
+    ctx.fillStyle = ice; ctx.fillRect(rx0-20, ry0-20, rx1-rx0+40, ry1-ry0+40);
+    // center red stripe (paint)
+    ctx.fillStyle = 'rgba(220,40,60,.18)';
+    ctx.fillRect(rx0, py(0.52)-2, rx1-rx0, 4);
+    // blue lines
+    ctx.fillStyle = 'rgba(80,140,255,.22)';
+    ctx.fillRect(rx0, py(0.35)-2, rx1-rx0, 4);
+    ctx.fillRect(rx0, py(0.68)-2, rx1-rx0, 4);
+    // center circle
+    ctx.strokeStyle = 'rgba(80,140,255,.35)';
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(W/2, py(0.52), Math.min(W,H)*0.10, 0, Math.PI*2); ctx.stroke();
+    // crease (top)
+    const g = goalBox();
+    ctx.strokeStyle = 'rgba(80,140,255,.45)';
+    ctx.beginPath();
+    ctx.arc(W/2, py(g.y + g.h), Math.min(W,H)*0.10, 0, Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = 'rgba(80,140,255,.12)';
+    ctx.fill();
+    // scuff marks
+    ctx.strokeStyle = 'rgba(255,255,255,.025)';
+    ctx.lineWidth = 1;
+    for (let i=0;i<18;i++){
+      const x = rx0 + Math.random()*(rx1-rx0);
+      const y = ry0 + Math.random()*(ry1-ry0);
+      ctx.beginPath();
+      ctx.moveTo(x,y);
+      ctx.lineTo(x+8+Math.random()*10, y+(Math.random()-.5)*4);
+      ctx.stroke();
+    }
+
+    // skid marks (FX)
+    state.fx.filter(p=>p.type==='skid').forEach(p => {
+      ctx.fillStyle = `rgba(120,135,150,${p.life*0.45})`;
+      ctx.beginPath();
+      ctx.ellipse(px(p.x), py(p.y), p.r*W*0.5, p.r*H*0.18, 0, 0, Math.PI*2);
+      ctx.fill();
+    });
+
+    ctx.restore();
+
+    // boards outline
+    ctx.strokeStyle = '#FAFAF5';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(rx0 + 18, ry0);
+    ctx.lineTo(rx1 - 18, ry0);
+    ctx.lineTo(rx1, ry1);
+    ctx.lineTo(rx0, ry1);
+    ctx.closePath();
+    ctx.stroke();
+
+    // GOAL
+    ctx.save();
+    const gx = px(g.x), gy = py(g.y), gw = px(g.w), gh = py(g.h);
+    // net
+    ctx.fillStyle = 'rgba(255,255,255,.06)';
+    ctx.fillRect(gx, gy, gw, gh);
+    ctx.strokeStyle = 'rgba(255,255,255,.25)';
+    ctx.lineWidth = 1;
+    for (let xx = gx + 8; xx < gx + gw; xx += 10){
+      ctx.beginPath(); ctx.moveTo(xx, gy); ctx.lineTo(xx, gy+gh); ctx.stroke();
+    }
+    for (let yy = gy + 6; yy < gy + gh; yy += 8){
+      ctx.beginPath(); ctx.moveTo(gx, yy); ctx.lineTo(gx+gw, yy); ctx.stroke();
+    }
+    // posts
+    ctx.fillStyle = '#FF3A4C';
+    ctx.fillRect(gx-3, gy, 5, gh);
+    ctx.fillRect(gx+gw-2, gy, 5, gh);
+    ctx.fillRect(gx-3, gy-2, gw+8, 5);
+    ctx.restore();
+
+    // goalie
+    const goalieY = py(g.y + g.h*0.55);
+    const goalieX = px(state.goalie.x);
+    ctx.save();
+    if (state.goalie.freeze > 0){
+      ctx.shadowColor = '#79E0FF'; ctx.shadowBlur = 12;
+    }
+    // pads
+    ctx.fillStyle = '#FAFAF5';
+    ctx.fillRect(goalieX - 22, goalieY - 4, 44, 22);
+    // body
+    ctx.fillStyle = '#0B1426';
+    ctx.fillRect(goalieX - 18, goalieY - 22, 36, 26);
+    // helmet
+    ctx.fillStyle = '#F5C518';
+    ctx.beginPath(); ctx.arc(goalieX, goalieY - 26, 9, 0, Math.PI*2); ctx.fill();
+    // glove
+    ctx.fillStyle = '#FF3A4C';
+    ctx.beginPath(); ctx.arc(goalieX - 22, goalieY - 8, 6, 0, Math.PI*2); ctx.fill();
+    // blocker
+    ctx.fillStyle = '#FF8A3D';
+    ctx.fillRect(goalieX + 16, goalieY - 14, 9, 12);
+    ctx.restore();
+
+    // power-ups
+    state.powerups.forEach(p => {
+      const x = px(p.x), y = py(p.y), r = p.r * Math.min(W,H);
+      ctx.save();
+      const pulse = 1 + Math.sin(performance.now()/180) * 0.08;
+      ctx.translate(x,y); ctx.scale(pulse,pulse);
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = p.color; ctx.shadowBlur = 14;
+      ctx.beginPath();
+      // diamond
+      ctx.moveTo(0,-r); ctx.lineTo(r,0); ctx.lineTo(0,r); ctx.lineTo(-r,0); ctx.closePath();
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = '#0B1426';
+      ctx.font = `bold ${Math.round(r*1.2)}px 'Archivo Black',sans-serif`;
+      ctx.textAlign='center'; ctx.textBaseline='middle';
+      const glyph = p.id === 'SPEED' ? '⚡' : (p.id === 'FREEZE' ? '❄' : '×2');
+      ctx.fillText(glyph, 0, 1);
+      ctx.restore();
+    });
+
+    // puck trail
+    state.puck.trail.forEach((t,i) => {
+      ctx.fillStyle = `rgba(255,138,61,${t.life*0.4})`;
+      ctx.beginPath();
+      ctx.arc(px(t.x), py(t.y), (i/state.puck.trail.length) * (state.puck.r * W * 0.6), 0, Math.PI*2);
+      ctx.fill();
+    });
+
+    // sparks
+    state.fx.filter(p=>p.type==='spark').forEach(p => {
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = Math.max(0, p.life);
+      ctx.fillRect(px(p.x)-2, py(p.y)-2, 4, 4);
+      ctx.globalAlpha = 1;
+    });
+
+    // player skater
+    const sh = state.player;
+    const shx = px(sh.x), shy = py(sh.y);
+    const shr = sh.r * Math.min(W,H);
+    // shadow
+    ctx.fillStyle = 'rgba(0,0,0,.35)';
+    ctx.beginPath(); ctx.ellipse(shx, shy + shr*0.7, shr*0.9, shr*0.4, 0, 0, Math.PI*2); ctx.fill();
+    // body
+    ctx.fillStyle = state.powerActive === 'SPEED' ? '#FFE066' : '#FAFAF5';
+    ctx.beginPath(); ctx.arc(shx, shy, shr, 0, Math.PI*2); ctx.fill();
+    // jersey number
+    ctx.fillStyle = '#8B1A2B';
+    ctx.font = `bold ${Math.round(shr*1.2)}px 'Archivo Black',sans-serif`;
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText('5', shx, shy);
+    // stick
+    ctx.strokeStyle = '#3D2418';
+    ctx.lineWidth = 3;
+    const sdx = Math.cos(sh.dir), sdy = Math.sin(sh.dir);
+    ctx.beginPath();
+    ctx.moveTo(shx + sdx*shr*0.4, shy + sdy*shr*0.4);
+    ctx.lineTo(shx + sdx*shr*1.6, shy + sdy*shr*1.6);
+    ctx.stroke();
+
+    // puck
+    if (!state.puck.attached || true){
+      const ppx = px(state.puck.x), ppy = py(state.puck.y);
+      const pr = state.puck.r * Math.min(W,H);
+      // lift shadow
+      const liftOffset = state.puck.lift * 10;
+      ctx.fillStyle = `rgba(0,0,0,${0.4 - state.puck.lift*0.3})`;
+      ctx.beginPath(); ctx.ellipse(ppx, ppy + 6, pr*0.9, pr*0.4, 0, 0, Math.PI*2); ctx.fill();
+      ctx.save();
+      ctx.translate(ppx, ppy - liftOffset);
+      ctx.fillStyle = '#0A0A0A';
+      ctx.beginPath(); ctx.arc(0, 0, pr, 0, Math.PI*2); ctx.fill();
+      ctx.strokeStyle = '#FF8A3D'; ctx.lineWidth = 1.5; ctx.stroke();
+      ctx.restore();
+    }
+
+    // FLASH overlay
+    if (state.flash > 0){
+      ctx.fillStyle = `rgba(255,224,102,${state.flash*0.5})`;
+      ctx.fillRect(0,0,W,H);
+    }
+
+    // MSG
+    if (state.msgT > 0 && state.msg){
+      const sc = 1 + Math.sin(state.msgT*8)*0.05;
+      ctx.save();
+      ctx.translate(W/2, H*0.40);
+      ctx.scale(sc,sc);
+      ctx.fillStyle = state.msg.includes('GOAL') ? '#FFE066' : (state.msg === 'SAVE!' ? '#79E0FF' : '#FAFAF5');
+      ctx.strokeStyle = '#0A0A0A';
+      ctx.lineWidth = 5;
+      ctx.font = `bold ${Math.max(32, H*0.10)}px 'Archivo Black',sans-serif`;
+      ctx.textAlign='center'; ctx.textBaseline='middle';
+      ctx.strokeText(state.msg, 0, 0);
+      ctx.fillText(state.msg, 0, 0);
+      ctx.restore();
+    }
+
+    ctx.restore();
+  }
+
+  /* ---- main loop ---- */
+  function loop(t){
+    const raw = (t - state.last) / 1000;
+    state.last = t;
+    const dt = Math.min(0.05, raw);
+    if (state.active){
+      step(dt);
+      draw();
+    }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+
+  /* ---- start / retry buttons ---- */
+  document.getElementById('rrStart').addEventListener('click', () => {
+    startIfNeeded();
+  });
+  document.getElementById('rrRetry').addEventListener('click', () => {
+    result.hidden = true;
+    startIfNeeded();
+  });
+  document.getElementById('rrShare').addEventListener('click', async () => {
+    const txt = `I scored ${state.score} on Rink Rush 🏒 — beat me at wormshockey.com`;
+    try {
+      if (navigator.share){ await navigator.share({ text:txt }); }
+      else { await navigator.clipboard.writeText(txt); alert('Copied: ' + txt); }
+    } catch(e){}
+  });
+
+  // Pause when not the active panel
+  function setActive(on){
+    state.active = on;
+    if (!on){
+      state.paused = true;
+    } else {
+      state.paused = false;
+      state.last = performance.now();
+      // refit on activate (canvas size may have changed while hidden)
+      requestAnimationFrame(fit);
+    }
+  }
+  // initial active
+  setActive(true);
+
+  return { state, setActive };
+})();
+
+/* =========================================================
+   🏒 WORM SHOOTOUT GAME
+   ========================================================= */
+GAME_MODES.WORM_SHOOTOUT = (() => {
+  const cv = document.getElementById('rink');
+  const ctx = cv.getContext('2d');
+  const TOP = document.getElementById('hudTop');
+  const SHOT = document.getElementById('hudShot');
+  const SCORE = document.getElementById('hudScore');
+  const RANK = document.getElementById('rank');
+  const startBtn = document.getElementById('startBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  const instr = document.getElementById('instr');
+  const soundTog = document.getElementById('soundTog');
+
+  let W = cv.width, H = cv.height;
+
+  // resize for crispness
+  function fit(){
+    const ratio = window.devicePixelRatio || 1;
+    const cssW = cv.clientWidth || cv.width;
+    const cssH = Math.round(cssW * (420/640));
+    cv.style.height = cssH + 'px';
+    cv.width = Math.round(cssW * ratio);
+    cv.height = Math.round(cssH * ratio);
+    W = cv.width; H = cv.height;
+    ctx.setTransform(ratio,0,0,ratio,0,0);
+  }
+  fit();
+  window.addEventListener('resize', fit);
+
+  // Audio (Web Audio synth, off by default)
+  let soundOn = false;
+  let actx = null;
+  function ensureCtx(){ if (!actx) actx = new (window.AudioContext||window.webkitAudioContext)(); }
+  function tone(freq, dur, type='sine', gain=0.1){
+    if (!soundOn) return;
+    ensureCtx();
+    const o = actx.createOscillator(); const g = actx.createGain();
+    o.type = type; o.frequency.value = freq;
+    g.gain.value = gain;
+    o.connect(g).connect(actx.destination);
+    o.start();
+    g.gain.exponentialRampToValueAtTime(0.001, actx.currentTime + dur);
+    o.stop(actx.currentTime + dur);
+  }
+  function slap(){ tone(180,.08,'square',.15); setTimeout(()=>tone(90,.12,'sawtooth',.1),60); }
+  function horn(){
+    if (!soundOn) return;
+    ensureCtx();
+    [180,240,300].forEach((f,i)=>setTimeout(()=>tone(f,.5,'square',.12), i*120));
+  }
+  function deny(){ tone(120,.18,'sawtooth',.12); }
+
+  soundTog.addEventListener('click', () => {
+    soundOn = !soundOn;
+    soundTog.textContent = soundOn ? '🔊' : '🔇';
+    if (soundOn) ensureCtx();
+  });
+
+  // Game state
+  const state = {
+    running:false,
+    shot:1,
+    score:0,
+    top: parseInt(localStorage.getItem('worm_top')||'0',10),
+    aim:{x:.5, y:.45},     // target on goal (0-1)
+    power:0,
+    charging:false,
+    chargeUp:true,
+    puck:null,
+    goalie:{x:0, dir:1, speed:1.6},
+    fx:[],
+    flash:0,
+    shake:0,
+    msg:'',
+    msgT:0,
+    pointer:null
+  };
+  TOP.textContent = state.top;
+
+  // Layout helpers (in CSS pixels)
+  const cssW = () => cv.clientWidth;
+  const cssH = () => cv.clientHeight;
+  const goal = () => {
+    const w = cssW(), h = cssH();
+    const gw = w * 0.42;
+    return { x:(w-gw)/2, y:h*0.10, w:gw, h:h*0.18 };
+  };
+  const shooter = () => {
+    const w = cssW(), h = cssH();
+    return { x:w/2, y:h*0.78, r: Math.max(10, h*0.04) };
+  };
+
+  function reset(round=true){
+    if (round){ state.shot=1; state.score=0; }
+    state.aim = { x:.5, y:.45 };
+    state.power = 0;
+    state.charging = false;
+    state.chargeUp = true;
+    state.puck = null;
+    state.fx = [];
+    state.flash = 0;
+    state.shake = 0;
+    state.msg = '';
+    state.msgT = 0;
+    state.goalie.x = goal().x + goal().w/2;
+    state.goalie.dir = Math.random()<.5?-1:1;
+    state.goalie.speed = 2.2 + state.shot*0.35;
+    state.goalie.tracking = 0;
+    SHOT.textContent = state.shot;
+    SCORE.textContent = state.score;
+    RANK.textContent = '';
+  }
+
+  function rankFor(s){
+    if (s>=5) return 'WORM LORD 👑';
+    if (s===4) return 'GOLD WORM 🥇';
+    if (s===3) return 'SILVER SNIPE 🥈';
+    if (s===2) return 'BRONZE WIGGLER 🥉';
+    return 'BENCH WARMER';
+  }
+
+  function endRound(){
+    state.running = false;
+    const r = rankFor(state.score);
+    RANK.textContent = `${state.score}/5 — ${r}`;
+    if (state.score > state.top){
+      state.top = state.score;
+      localStorage.setItem('worm_top', state.top);
+      TOP.textContent = state.top;
+    }
+    startBtn.textContent = 'Play again';
+    startBtn.style.display = '';
+    resetBtn.style.display = 'none';
+  }
+
+  function nextShot(){
+    state.shot++;
+    if (state.shot > 5){ endRound(); return; }
+    SHOT.textContent = state.shot;
+    state.aim = {x:.5, y:.45};
+    state.power = 0;
+    state.charging = false;
+    state.puck = null;
+    state.goalie.speed = 2.2 + state.shot*0.35;
+    state.goalie.tracking = 0;
+    state.goalie.miss = (Math.random()-0.5) * 60;
+  }
+
+  function shoot(){
+    if (state.puck || !state.running) return;
+    const sh = shooter();
+    const g = goal();
+    // Power matters: weak shots scatter off-aim, strong shots are dead-on.
+    const inaccuracy = Math.pow(1 - state.power, 2);
+    const aimX = state.aim.x + inaccuracy * (Math.random()-0.5) * 0.45;
+    const aimY = state.aim.y + inaccuracy * (Math.random()-0.5) * 0.30;
+    const tx = g.x + aimX * g.w;
+    const ty = g.y + aimY * g.h;
+    const dx = tx - sh.x, dy = ty - sh.y;
+    const dist = Math.hypot(dx,dy);
+    // Speed curve favors charged shots (squared), weak shots crawl in.
+    const speed = 4.5 + Math.pow(state.power, 1.4) * 22;
+    state.puck = {
+      x:sh.x, y:sh.y,
+      vx:(dx/dist)*speed,
+      vy:(dy/dist)*speed,
+      r: Math.max(5, cssH()*0.018),
+      tx, ty,
+      done:false
+    };
+    slap();
+  }
+
+  function spawnFx(x,y,color){
+    for (let i=0;i<22;i++){
+      state.fx.push({
+        x,y,
+        vx:(Math.random()-.5)*8,
+        vy:(Math.random()-.5)*8 - 2,
+        life:1,
+        color
+      });
+    }
+  }
+
+  function step(dt){
+    // goalie
+    const g = goal();
+    const gw = g.w * 0.21;            // narrower than the boss-mode build, still wider than original
+    const minX = g.x + gw/2 + 2;
+    const maxX = g.x + g.w - gw/2 - 2;
+
+    if (state.puck && !state.puck.done){
+      // ACTIVE TRACK: once puck is in the air, lunge toward where it's headed —
+      // but with a delayed reaction and a small prediction error so corners are still scoreable.
+      const dy = (g.y + g.h*0.5) - state.puck.y;
+      const t = state.puck.vy !== 0 ? dy / state.puck.vy : 0;
+      const predictX = state.puck.x + state.puck.vx * Math.max(0, t) + (state.goalie.miss || 0);
+      const targetX = Math.max(minX, Math.min(maxX, predictX));
+      const reactDelay = Math.max(0.04, 0.13 - state.shot*0.018);
+      state.goalie.tracking += dt;
+      const reacting = state.goalie.tracking > reactDelay;
+      const trackSpeed = (3.8 + state.shot*0.55) * dt * 60;
+      if (reacting){
+        const diff = targetX - state.goalie.x;
+        const move = Math.max(-trackSpeed, Math.min(trackSpeed, diff));
+        state.goalie.x += move;
+      }
+    } else {
+      // patrol
+      state.goalie.x += state.goalie.dir * state.goalie.speed * dt * 60;
+    }
+    if (state.goalie.x < minX){ state.goalie.x = minX; state.goalie.dir = 1; }
+    if (state.goalie.x > maxX){ state.goalie.x = maxX; state.goalie.dir = -1; }
+
+    // charging
+    if (state.charging){
+      const speed = 1.4 * dt;
+      if (state.chargeUp){ state.power += speed; if (state.power >= 1){ state.power = 1; state.chargeUp = false; } }
+      else { state.power -= speed; if (state.power <= 0){ state.power = 0; state.chargeUp = true; } }
+    }
+
+    // puck
+    if (state.puck && !state.puck.done){
+      state.puck.x += state.puck.vx;
+      state.puck.y += state.puck.vy;
+      const reachedY = state.puck.y <= state.puck.ty + 2;
+      // collision with goalie
+      const goalieBox = {x: state.goalie.x - gw/2, y:g.y, w:gw, h:g.h};
+      if (state.puck.x > goalieBox.x && state.puck.x < goalieBox.x + goalieBox.w &&
+          state.puck.y > goalieBox.y && state.puck.y < goalieBox.y + goalieBox.h){
+        state.puck.done = true;
+        spawnFx(state.puck.x, state.puck.y, '#FF3A4C');
+        state.flash = 1;
+        state.msg = 'DENIED';
+        state.msgT = 1.2;
+        deny();
+        setTimeout(nextShot, 900);
+        return;
+      }
+      if (reachedY){
+        state.puck.done = true;
+        const inGoal = state.puck.x > g.x + 4 && state.puck.x < g.x + g.w - 4
+                      && state.puck.y < g.y + g.h && state.puck.y > g.y;
+        if (inGoal){
+          state.score++;
+          SCORE.textContent = state.score;
+          spawnFx(state.puck.x, state.puck.y, '#F5C518');
+          state.shake = 18;
+          state.msg = 'WIGGLE!';
+          state.msgT = 1.4;
+          horn();
+        } else {
+          state.msg = 'WIDE';
+          state.msgT = 1.0;
+          deny();
+        }
+        setTimeout(nextShot, 900);
+      }
+    }
+
+    // fx
+    state.fx.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.vy += 0.25; p.life -= dt*1.4;
+    });
+    state.fx = state.fx.filter(p => p.life > 0);
+
+    if (state.flash > 0) state.flash = Math.max(0, state.flash - dt*2.2);
+    if (state.shake > 0) state.shake = Math.max(0, state.shake - dt*40);
+    if (state.msgT > 0) state.msgT -= dt;
+  }
+
+  function draw(){
+    const w = cssW(), h = cssH();
+    ctx.save();
+    // shake
+    if (state.shake > 0){
+      const s = state.shake;
+      ctx.translate((Math.random()-.5)*s, (Math.random()-.5)*s);
+    }
+    // rink bg
+    const grd = ctx.createLinearGradient(0,0,0,h);
+    grd.addColorStop(0,'#2a2a2a'); grd.addColorStop(1,'#0f0f0f');
+    ctx.fillStyle = grd; ctx.fillRect(0,0,w,h);
+
+    // crowd silhouettes
+    ctx.fillStyle = '#1a0e12';
+    for (let i=0;i<24;i++){
+      const x = (i/24)*w + 4;
+      const ch = 14 + ((i*37)%9);
+      const wob = state.score>0 && Math.sin(performance.now()/180 + i)>0.6 ? 3 : 0;
+      ctx.beginPath();
+      ctx.arc(x, 6 + wob, ch*0.4, 0, Math.PI*2);
+      ctx.fill();
+      ctx.fillRect(x-ch*0.4, 6 + wob, ch*0.8, ch);
+    }
+
+    // arena banner
+    ctx.fillStyle = '#7B1F2B';
+    ctx.fillRect(0, h*0.04, w, 14);
+    ctx.fillStyle = '#E8A02A';
+    ctx.font = `bold ${Math.max(10,h*0.028)}px 'Anton', sans-serif`;
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText('HEATWAVE ARENA · WIGGLE OR DIE', w/2, h*0.04 + 7);
+
+    // ice
+    ctx.fillStyle = '#202329';
+    ctx.fillRect(20, h*0.08, w-40, h*0.84);
+    // center line
+    ctx.strokeStyle = '#7B1F2B';
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(20, h*0.50); ctx.lineTo(w-20, h*0.50); ctx.stroke();
+    // creases
+    ctx.beginPath(); ctx.arc(w/2, h*0.20, 28, 0, Math.PI, false); ctx.strokeStyle='#3D2418'; ctx.stroke();
+
+    // goal
+    const g = goal();
+    ctx.fillStyle = '#FAFAF5';
+    ctx.fillRect(g.x, g.y, g.w, 6);
+    ctx.fillRect(g.x, g.y, 6, g.h);
+    ctx.fillRect(g.x + g.w - 6, g.y, 6, g.h);
+    ctx.fillStyle = 'rgba(232,160,42,0.12)';
+    ctx.fillRect(g.x+6, g.y+6, g.w-12, g.h-6);
+    // net pattern
+    ctx.strokeStyle = 'rgba(244,232,208,0.25)';
+    ctx.lineWidth = 1;
+    for (let x=g.x+10; x<g.x+g.w-6; x+=10){
+      ctx.beginPath(); ctx.moveTo(x, g.y+6); ctx.lineTo(x, g.y+g.h); ctx.stroke();
+    }
+    for (let y=g.y+12; y<g.y+g.h; y+=10){
+      ctx.beginPath(); ctx.moveTo(g.x+6, y); ctx.lineTo(g.x+g.w-6, y); ctx.stroke();
+    }
+
+    // goalie
+    const gw = g.w * 0.21;
+    ctx.fillStyle = '#0A0A0A';
+    ctx.fillRect(state.goalie.x - gw/2, g.y+4, gw, g.h-4);
+    ctx.fillStyle = '#F5C518';
+    ctx.fillRect(state.goalie.x - gw/2, g.y+g.h-10, gw, 6);
+    ctx.fillStyle = '#FAFAF5';
+    ctx.beginPath(); ctx.arc(state.goalie.x, g.y+12, 7, 0, Math.PI*2); ctx.fill();
+    // pads
+    ctx.fillStyle = '#3a3a3a';
+    ctx.fillRect(state.goalie.x - gw/2 - 4, g.y+18, 6, g.h-22);
+    ctx.fillRect(state.goalie.x + gw/2 - 2, g.y+18, 6, g.h-22);
+
+    // shooter (worm)
+    const sh = shooter();
+    ctx.fillStyle = '#8B1A2B';
+    ctx.beginPath(); ctx.arc(sh.x, sh.y, sh.r, 0, Math.PI*2); ctx.fill();
+    ctx.fillStyle = '#F5C518';
+    ctx.font = `bold ${Math.max(10,sh.r*0.9)}px 'Archivo Black', sans-serif`;
+    ctx.fillText('28', sh.x, sh.y+1);
+    // stick
+    ctx.strokeStyle = '#3D2418'; ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.moveTo(sh.x + sh.r*0.6, sh.y - sh.r*0.4);
+    ctx.lineTo(sh.x + sh.r*1.6, sh.y + sh.r*0.6);
+    ctx.stroke();
+
+    // aim line
+    if (state.running && !state.puck){
+      const tx = g.x + state.aim.x * g.w;
+      const ty = g.y + state.aim.y * g.h;
+      ctx.strokeStyle = `rgba(255,230,0,${0.35 + state.power*0.5})`;
+      ctx.setLineDash([6,5]);
+      ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(sh.x, sh.y); ctx.lineTo(tx, ty); ctx.stroke();
+      ctx.setLineDash([]);
+      // crosshair
+      ctx.strokeStyle = '#FFE600';
+      ctx.beginPath(); ctx.arc(tx, ty, 8, 0, Math.PI*2); ctx.stroke();
+      // power meter
+      const mw = w*0.4, mx = w*0.3, my = h*0.94;
+      ctx.fillStyle = '#222'; ctx.fillRect(mx,my,mw,8);
+      ctx.fillStyle = state.power>0.85?'#FFE600':'#E8A02A';
+      ctx.fillRect(mx,my,mw*state.power,8);
+      ctx.strokeStyle = '#FAFAF5'; ctx.strokeRect(mx,my,mw,8);
+    }
+
+    // puck
+    if (state.puck){
+      ctx.fillStyle = '#0A0A0A';
+      ctx.beginPath(); ctx.arc(state.puck.x, state.puck.y, state.puck.r, 0, Math.PI*2); ctx.fill();
+      ctx.strokeStyle = '#FAFAF5'; ctx.lineWidth = 1.5; ctx.stroke();
+    }
+
+    // fx
+    state.fx.forEach(p => {
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = Math.max(0, p.life);
+      ctx.fillRect(p.x, p.y, 4, 4);
+      ctx.globalAlpha = 1;
+    });
+
+    // flash
+    if (state.flash > 0){
+      ctx.fillStyle = `rgba(200,16,46,${state.flash*0.45})`;
+      ctx.fillRect(0,0,w,h);
+    }
+
+    // msg
+    if (state.msgT > 0 && state.msg){
+      const sc = 1 + Math.sin(state.msgT*6)*0.05;
+      ctx.save();
+      ctx.translate(w/2, h*0.45);
+      ctx.scale(sc,sc);
+      ctx.fillStyle = state.msg==='WIGGLE!'?'#FFE600':'#FAFAF5';
+      ctx.strokeStyle = '#0A0A0A';
+      ctx.lineWidth = 4;
+      ctx.font = `bold ${Math.max(28,h*0.13)}px 'Anton', sans-serif`;
+      ctx.textAlign = 'center'; ctx.textBaseline='middle';
+      ctx.strokeText(state.msg, 0, 0);
+      ctx.fillText(state.msg, 0, 0);
+      ctx.restore();
+    }
+
+    // overlay when not running
+    if (!state.running){
+      ctx.fillStyle = 'rgba(0,0,0,.55)';
+      ctx.fillRect(0,0,w,h);
+      ctx.fillStyle = '#E8A02A';
+      ctx.font = `bold ${Math.max(20,h*0.07)}px 'Anton', sans-serif`;
+      ctx.textAlign='center'; ctx.textBaseline='middle';
+      ctx.fillText('TAP "START ROUND"', w/2, h*0.5);
+      ctx.fillStyle = '#FAFAF5';
+      ctx.font = `${Math.max(11,h*0.035)}px 'Space Mono', monospace`;
+      ctx.fillText('5 shots · beat the goalie', w/2, h*0.62);
+    }
+
+    ctx.restore();
+  }
+
+  let last = performance.now();
+  let visible = true;
+  const visIO = new IntersectionObserver(es => { es.forEach(en => visible = en.isIntersecting); }, {threshold:.1});
+  visIO.observe(cv);
+
+  function loop(t){
+    const dt = Math.min(0.05, (t - last)/1000);
+    last = t;
+    if (visible){
+      step(dt);
+      draw();
+    }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+
+  /* ----- Input ----- */
+  function pointerPos(e){
+    const r = cv.getBoundingClientRect();
+    const cx = (e.touches?e.touches[0].clientX:e.clientX) - r.left;
+    const cy = (e.touches?e.touches[0].clientY:e.clientY) - r.top;
+    return {x:cx, y:cy};
+  }
+  function setAim(p){
+    const g = goal();
+    const ax = (p.x - g.x) / g.w;
+    const ay = (p.y - g.y) / g.h;
+    state.aim.x = Math.max(0.05, Math.min(0.95, ax));
+    state.aim.y = Math.max(0.10, Math.min(0.90, ay));
+  }
+
+  cv.addEventListener('pointerdown', e => {
+    if (!state.running || state.puck) return;
+    e.preventDefault();
+    cv.setPointerCapture(e.pointerId);
+    setAim(pointerPos(e));
+    state.charging = true;
+    state.chargeUp = true;
+    state.power = 0;
+  });
+  cv.addEventListener('pointermove', e => {
+    if (!state.running || state.puck) return;
+    if (e.buttons === 0 && !state.charging) return;
+    setAim(pointerPos(e));
+  });
+  cv.addEventListener('pointerup', e => {
+    if (!state.running || state.puck) return;
+    if (state.charging){
+      state.charging = false;
+      shoot();
+    }
+  });
+  cv.addEventListener('pointercancel', () => { state.charging = false; });
+
+  // keyboard
+  document.addEventListener('keydown', e => {
+    if (!state.running || state.puck) return;
+    if (e.code === 'ArrowLeft')  { state.aim.x = Math.max(0.05, state.aim.x - 0.05); }
+    if (e.code === 'ArrowRight') { state.aim.x = Math.min(0.95, state.aim.x + 0.05); }
+    if (e.code === 'ArrowUp')    { state.aim.y = Math.max(0.10, state.aim.y - 0.05); }
+    if (e.code === 'ArrowDown')  { state.aim.y = Math.min(0.90, state.aim.y + 0.05); }
+    if (e.code === 'Space'){
+      e.preventDefault();
+      if (!state.charging){ state.charging = true; state.chargeUp=true; state.power=0; }
+    }
+  });
+  document.addEventListener('keyup', e => {
+    if (e.code === 'Space' && state.charging){
+      state.charging = false;
+      if (state.running) shoot();
+    }
+  });
+
+  /* ----- Buttons ----- */
+  startBtn.addEventListener('click', () => {
+    reset(true);
+    state.running = true;
+    startBtn.style.display = 'none';
+    resetBtn.style.display = '';
+  });
+  resetBtn.addEventListener('click', () => {
+    state.running = false;
+    reset(true);
+    startBtn.style.display = '';
+    startBtn.textContent = 'Start round';
+    resetBtn.style.display = 'none';
+  });
+
+  reset(true);
+  let isActive = false;
+  function setActive(on){
+    isActive = on;
+    if (!on){ state.running = false; state.charging = false; }
+    if (on){ visible = true; }
+  }
+  // Patch loop to honor isActive
+  return { state, setActive, get active(){ return isActive; } };
+})();
+
+/* ----- FLOATING PLAY-HOCKEY CTA ----- */
+function wirePlayFab(){
+  const fab = document.getElementById('playFab');
+  const menu = document.getElementById('playMenu');
+  if (!fab || !menu) return;
+
+  // show fab after user scrolls past hero
+  const hero = document.querySelector('.hero');
+  const playSection = document.getElementById('play-more');
+  function update(){
+    const heroBottom = hero ? hero.getBoundingClientRect().bottom : 0;
+    const playRect = playSection ? playSection.getBoundingClientRect() : null;
+    // visible when past hero AND play-more section is not on screen
+    const pastHero = heroBottom < 40;
+    const playOn = playRect && playRect.top < window.innerHeight - 60 && playRect.bottom > 80;
+    fab.classList.toggle('visible', pastHero && !playOn);
+    if (!fab.classList.contains('visible') && menu.classList.contains('open')){
+      menu.classList.remove('open');
+      fab.setAttribute('aria-expanded','false');
+      menu.setAttribute('aria-hidden','true');
+    }
+  }
+  window.addEventListener('scroll', update, { passive:true });
+  window.addEventListener('resize', update);
+  update();
+
+  fab.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = !menu.classList.contains('open');
+    menu.classList.toggle('open', open);
+    fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+  });
+  document.addEventListener('click', e => {
+    if (!menu.contains(e.target) && e.target !== fab){
+      menu.classList.remove('open');
+      fab.setAttribute('aria-expanded','false');
+      menu.setAttribute('aria-hidden','true');
+    }
+  });
+  document.addEventListener('keyup', e => {
+    if (e.key === 'Escape' && menu.classList.contains('open')){
+      menu.classList.remove('open');
+      fab.setAttribute('aria-expanded','false');
+    }
+  });
+}
+
+/* ----- BOOT ----- */
+function boot(){
+  renderChamps();
+  renderRoster();
+  renderSchedule();
+  renderGallery();
+  spawnWorms();
+  wirePlayFab();
+  // Activate Rink Rush as primary; pause Worm Shootout engine
+  if (GAME_MODES.WORM_SHOOTOUT && GAME_MODES.WORM_SHOOTOUT.setActive){
+    GAME_MODES.WORM_SHOOTOUT.setActive(false);
+  }
+  // delay counters until hero is in view to feel snappier
+  setTimeout(animateCounters, 200);
+}
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+</body>
+</html>
